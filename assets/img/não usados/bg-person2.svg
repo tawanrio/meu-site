@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="802" viewBox="0 0 1080 802">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Story_do_Instagram_1);
+      }
+
+      .cls-2 {
+        fill: #3b4d52;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        filter: url(#Caminho_5);
+      }
+    </style>
+    <filter id="Caminho_5" x="-22.437" y="-27.683" width="924.748" height="875.879" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Story_do_Instagram_1">
+      <rect width="1080" height="802"/>
+    </clipPath>
+  </defs>
+  <g id="Story_do_Instagram_1" data-name="Story do Instagram – 1" class="cls-1">
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Caminho_5-2" data-name="Caminho 5" class="cls-2" d="M-5.279,825.29s-42.3-29.741,128.01-72.583c109.847-27.633,306.413-24.029,432.609-42.375,69.793-10.146,113.607-35.024,120.606-56.408,30.915-94.468-51.594-67.159-101.755-122.716C554,508.845,539.045,472.859,539.045,409.79,539.045,190.8,869.811-5.589,869.811-5.589L-1.624-.406" transform="translate(0 0.41)"/>
+    </g>
+    <path id="União_2" data-name="União 2" class="cls-3" d="M0,3404.009V0H584.217S473.3,262.332,458.255,479.435c-8.86,173.381,99.212,370.871,113.217,589.953a598.784,598.784,0,0,1-.208,115.01c-5.824,74.756-23.545,135.054-43.283,193.15-21.809,68.98-45.99,134.7-59.622,201.727a667.793,667.793,0,0,0-10.1,109.3q-.1,8.664-.04,17.218c.013.216.026.426.04.642,6.76,120.557,21.514,202.454,38.757,268.543,5.775,21.564,11.782,41.983,17.7,61.138,10.96,34.847,22.153,66.7,32.409,100.533,3.873,12.4,7.16,23.635,9.621,33.625,15.8,59.11,27.952,128,31.017,229.144,7.519,247.255-126.685,277.192-129.505,516.156s94.471,488.434,94.471,488.434Z" transform="translate(377 -117)"/>
+  </g>
+</svg>

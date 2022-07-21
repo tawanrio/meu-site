@@ -1,0 +1,61 @@
+@use '../1-base/_variables'
+@use '../1-base/_base-mixins'
+@use 'layouts-mixins'
+
+header nav.nav
+   display: flex
+   flex-direction: column
+   justify-content: center
+   position: absolute
+   top: 65px
+   right: 14vw
+   width: 70%
+   height: 45px
+   color: variables.$text-color-dark
+   background-color: variables.$section-bg-color
+   border-radius: 30px 0px 0px 30px  
+   box-shadow: -10px 10px 15px -10px rgba(0,0,0,0.3)
+
+   @include base-mixins.mobile
+      position: static
+      width: 100%
+      border-radius: 0
+      // flex-direction: row
+      
+      
+     
+   ul
+      display: flex
+      justify-content: space-evenly
+      @include base-mixins.mobile
+         // flex-direction: column
+
+      li#cv
+         // background-color: red
+         border: solid #ff0000 1px
+         color: #ff0000
+         border-radius: 20px
+         padding: 7px
+         font-weight: 500
+         cursor: pointer
+
+         &:hover
+            color: #DDA15E
+            border: solid #DDA15E 1px
+            transition: .3s 
+
+
+      li
+         display: flex
+         align-items: center
+         
+         a
+            font-size: 1.1rem
+            font-weight: 500
+            border-radius: 45px
+            cursor: pointer
+
+            &:hover
+               color: variables.$text-hover
+               text-decoration: underline
+   

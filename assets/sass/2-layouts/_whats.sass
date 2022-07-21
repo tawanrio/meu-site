@@ -1,0 +1,117 @@
+@use '../1-base/_variables'
+@use 'layouts-mixins'
+
+section.secwhats
+   width: 100%
+
+   .whats
+      margin-top: 7%
+      background-color: #3b4d52
+      height: 60vh
+      width: 100%
+      transition:  .5s 
+      
+      .content
+         width: 65%
+         transition:  .5s
+         position: relative
+         top: -10%
+         height: 120%
+         margin: auto
+         border-radius: 20px
+         background: linear-gradient(to bottom ,#343533 -17% , #3b4d52, #3b4d52, #3b4d52, #343533 117% )
+
+
+         .header
+            padding: 25px 0 0 0
+
+            i.btn-down
+               display: none
+
+            .title
+               margin-top: 1%
+               font-size: 3rem
+               color: #f5f3f1
+               
+               i
+                  position: absolute
+                  top: 3%
+                  margin: 0 2%  
+                  color: #388f1d
+               
+            hr
+               @include layouts-mixins.hr
+               width: 40%
+               
+         .main
+            width: 70%
+            margin: auto
+
+            i.btn-up
+               @include layouts-mixins.whats-btn-toggle
+
+            form
+               margin-top: 5%
+               display: flex
+               flex-direction: column
+
+               textarea , input
+                  @include layouts-mixins.input
+
+
+         
+   .whats-toggle
+      margin-top: 7%
+      background-color: variables.$secundary-bg-color
+      height: 55%
+      // width: 100%
+      transition:  .5s 
+
+      .content
+         box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3)
+         transition:  .5s
+         cursor: pointer
+         width: 35%
+         top: 0
+         height: 110%
+         position: relative
+         margin: auto
+         border-radius: 100px
+         background: linear-gradient(to bottom ,#343533 -17% , #3b4d52, #3b4d52, #3b4d52, #343533 117% )
+
+         .header
+            // padding: 10px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            
+            i.btn-down
+               @include layouts-mixins.whats-btn-toggle
+
+            .title
+               margin: -1% 0 0 -7%
+               font-size: 2rem
+               color: #f5f3f1
+               
+               i
+                  position: absolute
+                  top: 5%
+                  margin: 0 3%  
+                  font-size: 2.5rem
+                  color: #388f1d
+                  
+               
+            hr
+               @include layouts-mixins.hr
+               width: 80%
+
+         .main
+            display: none
+
+        
+
+
+
+
+   
+

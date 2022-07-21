@@ -1,0 +1,79 @@
+@use '../1-base/_variables'
+@use '../1-base/_base-mixins'
+@use 'layouts-mixins'
+
+header .home
+   @include layouts-mixins.center-content
+   flex-direction: column
+   padding: 2%
+   
+   &-content
+      font-size: 1.1rem
+      margin-top: 15%
+      @include base-mixins.mobile
+         // margin-top: 10%
+      
+      &-title
+         font-size: 3rem
+
+      flex-direction: column
+      &-desc
+         margin-top: 20px
+         @include base-mixins.mobile
+            margin-left: -2%
+         p
+            padding: 7px 0 
+            text-align: center
+            
+         
+
+   &-social-media
+      display: flex
+      margin-top: 5%
+
+      .social-media-subtitulo
+         font-size: 1.5rem
+         visibility: hidden
+
+         @include base-mixins.mobile
+            visibility: visible
+         
+      a
+         @include layouts-mixins.center-content
+         flex-direction: column
+         margin: 0 40px
+         
+         @include base-mixins.mobile
+            margin: 0 10px
+   
+      i
+         font-size: 4rem
+         color: variables.$dark-color
+         border-radius: 100%
+         height: 80px
+         width: 90px
+         padding: 7px 20px
+         cursor: pointer
+
+         @include base-mixins.mobile
+            border-radius: 0
+            height: 35px
+            width: 40px
+            font-size: 3rem
+            padding: 0
+
+      a:hover 
+         .social-media-subtitulo
+            visibility: visible
+            color: black
+         i
+            color: variables.$secundary-bg-color
+            background-color: variables.$text-hover
+            transition: .4s
+            @include base-mixins.mobile
+               color: variables.$dark-color
+               background-color: variables.$secundary-bg-color 
+
+      
+
+

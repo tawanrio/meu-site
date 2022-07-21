@@ -1,0 +1,96 @@
+@use '../1-base/variables'
+@use 'layouts-mixins'
+@use '../1-base/_base-mixins'
+
+
+main .skill
+  font-family: 'Montserrat', sans-serif
+
+  &-title
+    @include layouts-mixins.title-h2
+    margin: 0 20%
+
+  &-card
+    height: 75vh
+    display: flex
+    margin: 0 2%
+
+    @include base-mixins.mobile
+      height: 30vh
+      display: grid
+      grid-template-columns: 200px 200px
+      grid-template-rows: 1fr
+      grid-template-areas: "content img" "skill skill"
+
+    &-img
+      margin: auto
+
+      @include base-mixins.mobile
+        grid-area: img
+
+      span
+        font-size: .8rem
+        opacity: .5
+        position: relative
+        top: -3.5vh
+
+      img
+        width: 40vw
+  
+    &-content
+      font-size: 1.1rem
+      width: 75%
+      margin: auto
+      
+      @include base-mixins.mobile
+        grid-area: content
+      
+      &-title
+        margin-bottom: 25px
+        @include layouts-mixins.title-h3
+        
+      hr
+        @include layouts-mixins.hr
+        width: 55%
+      p
+          margin: 10px 0
+        
+    &-skill
+      text-align: start
+      width: 30%
+      margin: auto
+      
+      @include base-mixins.mobile
+        grid-area: skill
+        width: 100%
+        margin: auto
+        
+      ul
+        @include base-mixins.mobile
+          display: flex 
+          width: 100%
+
+        i
+          // width: 30px
+          // padding: 4px 0
+          // height: 25px
+          // color: variables.$dark-color
+          // margin: 0 5px
+          // border-radius: 100%
+          // text-align: center
+        li
+          cursor: pointer
+          font-weight: 500
+          
+          &:hover
+            color: variables.$text-hover
+
+            i
+              color: variables.$secundary-bg-color
+              background-color: variables.$text-hover
+              transition: .4s
+
+
+
+
+
