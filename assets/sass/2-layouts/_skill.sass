@@ -5,10 +5,14 @@
 
 main .skill
   font-family: 'Montserrat', sans-serif
+  @include base-mixins.mobile
+    background-image: linear-gradient(to top, #e7e4e4, #f5f3f1, #e7e4e4 , #f5f3f1)
+    background-repeat: no-repeat
 
   &-title
     @include layouts-mixins.title-h2
-    margin: 0 20%
+    margin: 0 0 10% 0% 
+    
 
   &-card
     height: 75vh
@@ -16,11 +20,11 @@ main .skill
     margin: 0 2%
 
     @include base-mixins.mobile
-      height: 30vh
+      height: 47vh
       display: grid
-      grid-template-columns: 200px 200px
-      grid-template-rows: 1fr
-      grid-template-areas: "content img" "skill skill"
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      grid-template-areas: "content content" "img img" "skill skill"
 
     &-img
       margin: auto
@@ -36,6 +40,8 @@ main .skill
 
       img
         width: 40vw
+        @include base-mixins.mobile
+          width: 55vw
   
     &-content
       font-size: 1.1rem
@@ -43,7 +49,9 @@ main .skill
       margin: auto
       
       @include base-mixins.mobile
+        font-size: 1.4rem
         grid-area: content
+        width: 100%
       
       &-title
         margin-bottom: 25px
@@ -62,25 +70,27 @@ main .skill
       
       @include base-mixins.mobile
         grid-area: skill
-        width: 100%
-        margin: auto
+        width: 90%
+        margin-top: 0
         
       ul
         @include base-mixins.mobile
-          display: flex 
-          width: 100%
-
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-evenly
         i
-          // width: 30px
-          // padding: 4px 0
-          // height: 25px
-          // color: variables.$dark-color
-          // margin: 0 5px
-          // border-radius: 100%
-          // text-align: center
+          width: 30px
+          padding: 4px 0
+          height: 25px
+          color: variables.$dark-color
+          margin: 0 5px
+          border-radius: 100%
+          text-align: center
         li
           cursor: pointer
           font-weight: 500
+          @include base-mixins.mobile
+            margin: 0 5px
           
           &:hover
             color: variables.$text-hover

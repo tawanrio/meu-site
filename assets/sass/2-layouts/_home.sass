@@ -11,16 +11,19 @@ header .home
       font-size: 1.1rem
       margin-top: 15%
       @include base-mixins.mobile
-         // margin-top: 10%
+         margin-top: 10%
       
       &-title
          font-size: 3rem
+         @include base-mixins.mobile
+            font-size: 3.5rem 
+            // text-align: start
 
-      flex-direction: column
       &-desc
          margin-top: 20px
          @include base-mixins.mobile
-            margin-left: -2%
+            font-size: 1.5rem
+         
          p
             padding: 7px 0 
             text-align: center
@@ -44,7 +47,7 @@ header .home
          margin: 0 40px
          
          @include base-mixins.mobile
-            margin: 0 10px
+            margin: 0 15px
    
       i
          font-size: 4rem

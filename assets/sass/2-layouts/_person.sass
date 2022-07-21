@@ -9,11 +9,11 @@ header .person
    font-family: 'Montserrat Alternates', sans-serif
 
    @include base-mixins.mobile
+      margin-top: 5%
       flex-direction: row
-      // margin-top: 0%
-      // border-radius: 200px 0px 0px 0px
-      // background-color: variables.$bg-color
-      // background-color: variables.$bg-color
+      height: 24%
+      background-color: variables.$bg-color
+      border-radius: 0px 200px 0px 150px
       
 
    #foto-m
@@ -23,10 +23,8 @@ header .person
       border-radius: 12%
 
       @include base-mixins.mobile
-         // display: none
-         width: 28%
-         // justify-content: space-evenly
-         // margin-top: 5%
+         width: 27%
+         margin: 0
       
    &-title
       background-image: linear-gradient(to right, #c5bcb8 20%, #f5f3f1 40%, #c5bcb8 45%, #f5f3f1 95%)
@@ -35,7 +33,7 @@ header .person
 
       @include base-mixins.mobile
          width: 50%
-         margin-top: 5%
+         // margin-top: 5%
       
       
       .name

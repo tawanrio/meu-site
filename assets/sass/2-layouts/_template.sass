@@ -25,9 +25,9 @@ header
 
    @include base-mixins.mobile
       background-position-x: 0px
-      background-position-y: -139%
-      background-size: 115%
-      height: 75vh
+      background-position-y: -280.5vh
+      background-size: 65vh
+      height: 68vh
       flex-direction: column
 
    .person
@@ -70,6 +70,8 @@ main
       position: absolute
       top: 103vh
       z-index: -1
+      @include base-mixins.mobile
+         background-image: linear-gradient(to bottom, #f5f3f1, #1d1717, #f5f3f1, #e7e4e4, #f5f3f1)
 
    #portfolio-bg
       position: absolute

@@ -6,7 +6,7 @@ html {
 }
 @media (max-width: 425px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -54,17 +54,26 @@ header .home {
 header .home-content {
   font-size: 1.1rem;
   margin-top: 15%;
-  flex-direction: column;
+}
+@media (max-width: 425px) {
+  header .home-content {
+    margin-top: 10%;
+  }
 }
 header .home-content-title {
   font-size: 3rem;
+}
+@media (max-width: 425px) {
+  header .home-content-title {
+    font-size: 3.5rem;
+  }
 }
 header .home-content-desc {
   margin-top: 20px;
 }
 @media (max-width: 425px) {
   header .home-content-desc {
-    margin-left: -2%;
+    font-size: 1.5rem;
   }
 }
 header .home-content-desc p {
@@ -95,7 +104,7 @@ header .home-social-media a {
 }
 @media (max-width: 425px) {
   header .home-social-media a {
-    margin: 0 10px;
+    margin: 0 15px;
   }
 }
 header .home-social-media i {
@@ -154,9 +163,9 @@ header {
 @media (max-width: 425px) {
   header {
     background-position-x: 0px;
-    background-position-y: -139%;
-    background-size: 115%;
-    height: 75vh;
+    background-position-y: -280.5vh;
+    background-size: 65vh;
+    height: 68vh;
     flex-direction: column;
   }
 }
@@ -213,6 +222,11 @@ main #skill-bg {
   top: 103vh;
   z-index: -1;
 }
+@media (max-width: 425px) {
+  main #skill-bg {
+    background-image: linear-gradient(to bottom, #f5f3f1, #1d1717, #f5f3f1, #e7e4e4, #f5f3f1);
+  }
+}
 main #portfolio-bg {
   position: absolute;
   left: -1px;
@@ -239,7 +253,11 @@ header .person {
 }
 @media (max-width: 425px) {
   header .person {
+    margin-top: 5%;
     flex-direction: row;
+    height: 24%;
+    background-color: #3b4d52;
+    border-radius: 0px 200px 0px 150px;
   }
 }
 header .person #foto-m {
@@ -250,7 +268,8 @@ header .person #foto-m {
 }
 @media (max-width: 425px) {
   header .person #foto-m {
-    width: 28%;
+    width: 27%;
+    margin: 0;
   }
 }
 header .person-title {
@@ -261,7 +280,6 @@ header .person-title {
 @media (max-width: 425px) {
   header .person-title {
     width: 50%;
-    margin-top: 5%;
   }
 }
 header .person-title .name {
@@ -308,7 +326,9 @@ header nav.nav {
   header nav.nav {
     position: static;
     width: 100%;
+    background-image: linear-gradient(to right, #f5f3f1, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1);
     border-radius: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   }
 }
 header nav.nav ul {
@@ -346,10 +366,21 @@ header nav.nav ul li a:hover {
 main .skill {
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 425px) {
+  main .skill {
+    background-image: linear-gradient(to top, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1);
+    background-repeat: no-repeat;
+  }
+}
 main .skill-title {
   font-size: 2.5rem;
   text-align: center;
-  margin: 0 20%;
+  margin: 0 0 10% 0%;
+}
+@media (max-width: 425px) {
+  main .skill-title {
+    font-size: 3rem;
+  }
 }
 main .skill-card {
   height: 75vh;
@@ -358,11 +389,11 @@ main .skill-card {
 }
 @media (max-width: 425px) {
   main .skill-card {
-    height: 30vh;
+    height: 47vh;
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 1fr;
-    grid-template-areas: "content img" "skill skill";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "content content" "img img" "skill skill";
   }
 }
 main .skill-card-img {
@@ -382,6 +413,11 @@ main .skill-card-img span {
 main .skill-card-img img {
   width: 40vw;
 }
+@media (max-width: 425px) {
+  main .skill-card-img img {
+    width: 55vw;
+  }
+}
 main .skill-card-content {
   font-size: 1.1rem;
   width: 75%;
@@ -389,13 +425,20 @@ main .skill-card-content {
 }
 @media (max-width: 425px) {
   main .skill-card-content {
+    font-size: 1.4rem;
     grid-area: content;
+    width: 100%;
   }
 }
 main .skill-card-content-title {
   margin-bottom: 25px;
   font-size: 1.8rem;
   text-align: center;
+}
+@media (max-width: 425px) {
+  main .skill-card-content-title {
+    font-size: 2.2rem;
+  }
 }
 main .skill-card-content hr {
   width: 130%;
@@ -418,19 +461,34 @@ main .skill-card-skill {
 @media (max-width: 425px) {
   main .skill-card-skill {
     grid-area: skill;
-    width: 100%;
-    margin: auto;
+    width: 90%;
+    margin-top: 0;
   }
 }
 @media (max-width: 425px) {
   main .skill-card-skill ul {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
+}
+main .skill-card-skill ul i {
+  width: 30px;
+  padding: 4px 0;
+  height: 25px;
+  color: black;
+  margin: 0 5px;
+  border-radius: 100%;
+  text-align: center;
 }
 main .skill-card-skill ul li {
   cursor: pointer;
   font-weight: 500;
+}
+@media (max-width: 425px) {
+  main .skill-card-skill ul li {
+    margin: 0 5px;
+  }
 }
 main .skill-card-skill ul li:hover {
   color: #BC6C25;
@@ -448,6 +506,11 @@ main .portfolio-title {
   font-size: 2.5rem;
   text-align: center;
   margin: 3% 0;
+}
+@media (max-width: 425px) {
+  main .portfolio-title {
+    font-size: 3rem;
+  }
 }
 main .portfolio-carousel {
   height: 75vh;
@@ -482,6 +545,11 @@ main .portfolio-carousel-card-header-title {
   font-size: 1.2rem;
   font-size: 1.3rem;
   text-align: center;
+}
+@media (max-width: 425px) {
+  main .portfolio-carousel-card-header-title {
+    font-size: 1.8rem;
+  }
 }
 main .portfolio-carousel-card-header-title hr {
   width: 130%;
