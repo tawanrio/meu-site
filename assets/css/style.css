@@ -26,7 +26,7 @@ a {
   color: #22223b;
 }
 a:hover {
-  color: #BC6C25;
+  color: #07a777;
 }
 
 p {
@@ -107,17 +107,17 @@ header .home-social-media a {
     margin: 0 15px;
   }
 }
-header .home-social-media i {
+header .home-social-media a i {
   font-size: 4rem;
   color: black;
   border-radius: 100%;
-  height: 80px;
+  height: 85px;
   width: 90px;
-  padding: 7px 20px;
+  padding-top: 10px;
   cursor: pointer;
 }
 @media (max-width: 425px) {
-  header .home-social-media i {
+  header .home-social-media a i {
     border-radius: 0;
     height: 35px;
     width: 40px;
@@ -131,7 +131,7 @@ header .home-social-media a:hover .social-media-subtitulo {
 }
 header .home-social-media a:hover i {
   color: #f5f2e6;
-  background-color: #BC6C25;
+  background-color: #07a777;
   transition: 0.4s;
 }
 @media (max-width: 425px) {
@@ -147,6 +147,8 @@ body {
   grid-template-rows: 1fr;
   grid-template-areas: "header" "main" "footer";
   background-color: #f5f2e6;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #f1f1f1, #f5f3f1, #f1f1f1);
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -157,8 +159,9 @@ header {
   height: 96vh;
   background-repeat: no-repeat;
   background-image: url("../img/backgrounds/bg-person6.svg");
-  background-position-x: -80px;
-  background-size: 65%;
+  background-image: url("../img/backgrounds/teste6.png");
+  background-position-x: -70px;
+  background-size: 63%;
 }
 @media (max-width: 425px) {
   header {
@@ -222,17 +225,12 @@ main #skill-bg {
   top: 103vh;
   z-index: -1;
 }
-@media (max-width: 425px) {
-  main #skill-bg {
-    background-image: linear-gradient(to bottom, #f5f3f1, #1d1717, #f5f3f1, #e7e4e4, #f5f3f1);
-  }
-}
 main #portfolio-bg {
   position: absolute;
-  left: -1px;
-  width: 98.7vw;
+  left: 0;
+  width: 100%;
   z-index: -1;
-  top: 259%;
+  top: 238%;
 }
 
 footer {
@@ -256,7 +254,7 @@ header .person {
     margin-top: 5%;
     flex-direction: row;
     height: 24%;
-    background-color: #3b4d52;
+    background-image: url("../img/backgrounds/background3.jpg");
     border-radius: 0px 200px 0px 150px;
   }
 }
@@ -318,7 +316,7 @@ header nav.nav {
   width: 70%;
   height: 45px;
   color: #283618;
-  background-color: #f5f2e6;
+  background-image: linear-gradient(to right, #f1f1f1, #f5f3f1, rgba(241, 241, 241, 0));
   border-radius: 30px 0px 0px 30px;
   box-shadow: -10px 10px 15px -10px rgba(0, 0, 0, 0.3);
 }
@@ -359,7 +357,7 @@ header nav.nav ul li a {
   cursor: pointer;
 }
 header nav.nav ul li a:hover {
-  color: #BC6C25;
+  color: #07a777;
   text-decoration: underline;
 }
 
@@ -491,11 +489,11 @@ main .skill-card-skill ul li {
   }
 }
 main .skill-card-skill ul li:hover {
-  color: #BC6C25;
+  color: #07a777;
 }
 main .skill-card-skill ul li:hover i {
   color: #f5f2e6;
-  background-color: #BC6C25;
+  background-color: #07a777;
   transition: 0.4s;
 }
 
@@ -653,7 +651,7 @@ section.secwhats .whats .content .main i.btn-up {
 section.secwhats .whats .content .main i.btn-up:hover {
   transform: scale(1.3);
   transition: 0.2s;
-  color: #BC6C25;
+  color: #07a777;
 }
 section.secwhats .whats .content .main form {
   margin-top: 5%;
@@ -682,7 +680,7 @@ section.secwhats .whats-toggle .content {
   position: relative;
   margin: auto;
   border-radius: 100px;
-  background: linear-gradient(to bottom, #343533 -17%, #3b4d52, #3b4d52, #3b4d52, #343533 117%);
+  background: linear-gradient(to bottom, #31394d -17%, #3f5e94, #3f5e94, #3f5e94, #31394d 117%);
 }
 section.secwhats .whats-toggle .content .header {
   display: flex;
@@ -703,7 +701,7 @@ section.secwhats .whats-toggle .content .header i.btn-down {
 section.secwhats .whats-toggle .content .header i.btn-down:hover {
   transform: scale(1.3);
   transition: 0.2s;
-  color: #BC6C25;
+  color: #07a777;
 }
 section.secwhats .whats-toggle .content .header .title {
   margin: -1% 0 0 -7%;
@@ -745,7 +743,7 @@ section.secwhats .whats-toggle .content .main {
 }
 .footer li a:hover, .footer li a:hover i, .footer p a:hover, .footer p a:hover i {
   transform: 0.4s;
-  color: #BC6C25;
+  color: #07a777;
 }
 .footer-top {
   margin: 0 auto;
