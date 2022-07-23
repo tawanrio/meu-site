@@ -5,6 +5,7 @@
 
 main .skill
   width: 100%
+  // height: 50%
   // font-family: 'Montserrat', sans-serif
 
   &-title
@@ -22,9 +23,10 @@ main .skill
 
     @include base-mixins.mobile
       display: grid
-      grid-template-columns: 1fr 1fr
-      grid-template-rows: 1fr 1fr 1fr
-      grid-template-areas: "content content" "img img" "skill skill"
+      // height: 45%
+      grid-template-columns: 1fr
+      grid-template-rows: 40% 1fr 10%
+      grid-template-areas: "content" "img" "skill"
 
     &-img
       margin: auto

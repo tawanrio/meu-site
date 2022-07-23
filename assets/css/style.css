@@ -295,6 +295,7 @@ main {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  justify-content: flex-start;
 }
 main section {
   padding: 5px 35px;
@@ -517,9 +518,9 @@ main .skill-card {
 @media (max-width: 625px) {
   main .skill-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "content content" "img img" "skill skill";
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 1fr 10%;
+    grid-template-areas: "content" "img" "skill";
   }
 }
 main .skill-card-img {
@@ -699,7 +700,6 @@ main .portfolio-carousel-card {
 @media (max-width: 625px) {
   main .portfolio-carousel-card {
     width: 80%;
-    margin-top: 20%;
   }
 }
 main .portfolio-carousel-card:hover {
