@@ -61,6 +61,7 @@ header .home {
   text-align: center;
   flex-direction: column;
   padding: 2%;
+  height: 65;
 }
 header .home-content {
   font-size: 1.1rem;
@@ -68,7 +69,7 @@ header .home-content {
 }
 @media (max-width: 425px) {
   header .home-content {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 header .home-content-title {
@@ -78,13 +79,8 @@ header .home-content-title {
   text-align: center;
   text-align: center;
 }
-@media (max-width: 425px) {
-  header .home-content-title {
-    font-size: 3.5rem;
-  }
-}
 header .home-content-desc {
-  margin-top: 20px;
+  margin-top: 5%;
 }
 @media (max-width: 425px) {
   header .home-content-desc {
@@ -119,7 +115,7 @@ header .home-social-media a {
 }
 @media (max-width: 425px) {
   header .home-social-media a {
-    margin: 0 15px;
+    margin: 1% 15px;
   }
 }
 header .home-social-media a i {
@@ -163,7 +159,7 @@ body {
   grid-template-areas: "header" "main" "footer";
   background-color: #f5f2e6;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to top, #f1f1f1, #f5f3f1, #f1f1f1);
+  background-image: linear-gradient(to top, #f1f1f1, #effcfd, #f1f1f1);
   margin: 0 auto;
 }
 
@@ -182,7 +178,6 @@ header {
     background-position-x: 0px;
     background-position-y: -280.5vh;
     background-size: 65vh;
-    height: 68vh;
     flex-direction: column;
   }
 }
@@ -248,7 +243,7 @@ main #portfolio-bg {
 }
 @media (max-width: 425px) {
   main #portfolio-bg {
-    top: 180%;
+    top: 261%;
   }
 }
 
@@ -271,9 +266,9 @@ header .person {
   header .person {
     margin-top: 5%;
     flex-direction: row;
-    height: 24%;
+    height: 100%;
     background-image: url("../img/backgrounds/background3.jpg");
-    border-radius: 0px 200px 0px 150px;
+    border-radius: 35px 200px 35px 150px;
   }
 }
 header .person #foto-m {
@@ -344,8 +339,8 @@ header nav.nav {
   header nav.nav {
     position: static;
     width: 100%;
-    background-image: linear-gradient(to right, #f5f3f1, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1);
     border-radius: 0;
+    background-image: linear-gradient(to right, #0650a5, #0051ad, #0650a5);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   }
 }
@@ -360,6 +355,13 @@ header nav.nav ul li#cv {
   padding: 7px;
   cursor: pointer;
 }
+@media (max-width: 425px) {
+  header nav.nav ul li#cv {
+    color: white;
+    border: solid rgba(238, 238, 238, 0) 2px;
+    padding: 0;
+  }
+}
 header nav.nav ul li#cv:hover {
   background-image: linear-gradient(to right, rgba(131, 206, 216, 0), rgba(21, 118, 175, 0.1921568627), rgba(9, 153, 236, 0));
   color: #0917db;
@@ -370,22 +372,26 @@ header nav.nav ul li {
   display: flex;
   align-items: center;
 }
+@media (max-width: 425px) {
+  header nav.nav ul li {
+    padding: 15px 0;
+  }
+}
 header nav.nav ul li a {
   font-size: 1.1rem;
   border-radius: 45px;
   cursor: pointer;
+}
+@media (max-width: 425px) {
+  header nav.nav ul li a {
+    color: white;
+  }
 }
 header nav.nav ul li a:hover {
   color: #28db91;
   text-decoration: underline;
 }
 
-@media (max-width: 425px) {
-  main .skill {
-    background-image: linear-gradient(to top, #f5f3f1, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1);
-    background-repeat: no-repeat;
-  }
-}
 main .skill-title {
   font-weight: 600;
   font-family: "Cormorant SC", serif;
@@ -400,7 +406,8 @@ main .skill-title {
 }
 @media (max-width: 425px) {
   main .skill-title {
-    margin-top: 10%;
+    margin-bottom: 0%;
+    margin-top: 15%;
   }
 }
 main .skill-card {
@@ -410,7 +417,7 @@ main .skill-card {
 }
 @media (max-width: 425px) {
   main .skill-card {
-    height: 47vh;
+    height: 70vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -461,6 +468,11 @@ main .skill-card-content-title {
 @media (max-width: 425px) {
   main .skill-card-content-title {
     font-size: 2.7rem;
+  }
+}
+@media (max-width: 425px) {
+  main .skill-card-content-title {
+    margin-top: 10%;
   }
 }
 main .skill-card-content hr {
@@ -551,7 +563,6 @@ main .portfolio-carousel {
 @media (max-width: 425px) {
   main .portfolio-carousel {
     flex-direction: column;
-    height: 120vh;
   }
 }
 main .portfolio-carousel-card {
@@ -636,7 +647,7 @@ section.secwhats {
 section.secwhats .whats {
   margin-top: 7%;
   background-color: #3f5e94;
-  height: 60vh;
+  height: 65vh;
   width: 100%;
   transition: 0.5s;
 }
@@ -650,6 +661,11 @@ section.secwhats .whats .content {
   border-radius: 20px;
   background: linear-gradient(to bottom, #31394d -17%, #4972b9, #4972b9, #4972b9, #31394d 117%);
   background: linear-gradient(to bottom, #173d28 -17%, #4972b9, #3b7ca7, #4972b9, #173d28 117%);
+}
+@media (max-width: 425px) {
+  section.secwhats .whats .content {
+    width: 90%;
+  }
 }
 section.secwhats .whats .content .header {
   padding: 25px 0 0 0;
@@ -711,7 +727,7 @@ section.secwhats .whats .content .main form textarea, section.secwhats .whats .c
   box-shadow: 0px 10px 15px -15px rgb(0, 0, 0);
 }
 section.secwhats .whats-toggle {
-  background-color: #f5f2e6;
+  background-color: rgba(239, 254, 255, 0);
   height: 55%;
   transition: 0.5s;
 }
@@ -725,6 +741,12 @@ section.secwhats .whats-toggle .content {
   position: relative;
   margin: auto;
   border-radius: 80px 20px 80px 20px;
+}
+@media (max-width: 425px) {
+  section.secwhats .whats-toggle .content {
+    width: 60%;
+    height: 165%;
+  }
 }
 section.secwhats .whats-toggle .content .header {
   display: flex;
@@ -779,6 +801,12 @@ section.secwhats .whats-toggle .content .main {
 .footer li, .footer p {
   margin-bottom: 10px;
 }
+@media (max-width: 425px) {
+  .footer li, .footer p {
+    font-size: 0.65rem;
+    text-align: start;
+  }
+}
 .footer li a:hover, .footer li a:hover i, .footer p a:hover, .footer p a:hover i {
   transform: 0.4s;
   color: #28db91;
@@ -791,8 +819,18 @@ section.secwhats .whats-toggle .content .main {
   text-align: center;
   justify-content: space-evenly;
 }
+@media (max-width: 425px) {
+  .footer-top {
+    align-items: flex-start;
+  }
+}
 .footer-top-about {
   max-width: 50%;
+}
+@media (max-width: 425px) {
+  .footer-top-about {
+    padding: 0 10px;
+  }
 }
 .footer-top-information {
   max-width: 30%;
@@ -807,7 +845,14 @@ section.secwhats .whats-toggle .content .main {
 .footer-top .dados i {
   width: 25px;
   color: white;
-  margin: 0 0px;
+}
+@media (max-width: 425px) {
+  .footer-top .dados {
+    padding: 0 10px;
+  }
+  .footer-top .dados i {
+    width: 12px;
+  }
 }
 .footer-bottom {
   margin: 0 auto;

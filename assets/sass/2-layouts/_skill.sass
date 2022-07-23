@@ -5,15 +5,13 @@
 
 main .skill
   // font-family: 'Montserrat', sans-serif
-  @include base-mixins.mobile
-    background-image: linear-gradient(to top, #f5f3f1, #e7e4e4, #f5f3f1, #e7e4e4 , #f5f3f1)
-    background-repeat: no-repeat
 
   &-title
     @include layouts-mixins.title-h2
     margin-bottom: 10%
     @include base-mixins.mobile
-      margin-top: 10%
+      margin-bottom: 0%
+      margin-top: 15%
     
 
   &-card
@@ -22,7 +20,7 @@ main .skill
     margin: 0 2%
 
     @include base-mixins.mobile
-      height: 47vh
+      height: 70vh
       display: grid
       grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr 1fr 1fr
@@ -58,6 +56,9 @@ main .skill
       &-title
         margin-bottom: 25px
         @include layouts-mixins.title-h3
+        @include base-mixins.mobile
+          margin-top: 10%
+        
         
       hr
         @include layouts-mixins.hr

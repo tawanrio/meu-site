@@ -9,7 +9,7 @@ body
    grid-template-areas: "header" "main" "footer"
    background-color: variables.$secundary-bg-color
    background-repeat: no-repeat
-   background-image: linear-gradient(to top, #f1f1f1, #f5f3f1, #f1f1f1 )
+   background-image: linear-gradient(to top, #f1f1f1, #effcfd, #f1f1f1 )
    // background-size: 100vh
    // max-width: 1300px
    margin: 0 auto
@@ -33,7 +33,7 @@ header
       background-position-x: 0px
       background-position-y: -280.5vh
       background-size: 65vh
-      height: 68vh
+      // height: 100vh
       flex-direction: column
 
    .person
@@ -84,7 +84,7 @@ main
       z-index: -1
       top: 233%
       @include base-mixins.mobile
-         top: 180%
+         top: 261%
 
 footer
    grid-area: footer

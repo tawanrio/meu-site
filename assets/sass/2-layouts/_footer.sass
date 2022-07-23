@@ -1,5 +1,6 @@
 @use '../1-base/variables'
 @use 'layouts-mixins'
+@use '../1-base/_base-mixins'
 
 
 .footer
@@ -14,6 +15,9 @@
    
    li, p 
       margin-bottom: 10px
+      @include base-mixins.mobile
+         font-size: .65rem
+         text-align: start
 
       a
          &:hover, &:hover i
@@ -24,8 +28,13 @@
       @include layouts-mixins.center-content
       justify-content: space-evenly
 
+      @include base-mixins.mobile
+         align-items: flex-start
+
       &-about
          max-width: 50%
+         @include base-mixins.mobile
+            padding: 0 10px
 
       &-information
          max-width: 30%
@@ -38,7 +47,11 @@
          i
             width: 25px
             color: variables.$light-color
-            margin: 0 0px
+            
+         @include base-mixins.mobile
+            padding: 0 10px
+            i  
+               width: 12px
   
       
 

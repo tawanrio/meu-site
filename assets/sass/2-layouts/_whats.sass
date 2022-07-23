@@ -1,4 +1,5 @@
 @use '../1-base/_variables'
+@use '../1-base/_base-mixins'
 @use 'layouts-mixins'
 
 section.secwhats
@@ -8,7 +9,7 @@ section.secwhats
    .whats
       margin-top: 7%
       background-color: #3f5e94
-      height: 60vh
+      height: 65vh
       width: 100%
       transition:  .5s 
       
@@ -23,6 +24,9 @@ section.secwhats
          border-radius: 20px
          background: linear-gradient(to bottom ,#31394d -17% ,  #4972b9, #4972b9, #4972b9, #31394d 117% )
          background: linear-gradient(to bottom ,#173d28 -17% ,  #4972b9, #3b7ca7, #4972b9, #173d28 117% )
+
+         @include base-mixins.mobile
+            width: 90%
 
 
          .header
@@ -67,7 +71,7 @@ section.secwhats
          
    .whats-toggle
       // margin-top: 0%
-      background-color: variables.$secundary-bg-color
+      background-color: #effeff00
       height: 55%
       transition:  .5s 
 
@@ -81,6 +85,10 @@ section.secwhats
          position: relative
          margin: auto
          border-radius: 80px 20px 80px 20px
+
+         @include base-mixins.mobile
+            width: 60%
+            height: 165%
 
          .header
             display: flex

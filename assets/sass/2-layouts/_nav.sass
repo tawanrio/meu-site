@@ -19,8 +19,8 @@ header nav.nav
    @include base-mixins.mobile
       position: static
       width: 100%
-      background-image: linear-gradient(to right, #f5f3f1, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1)
       border-radius: 0
+      background-image: linear-gradient(to right, #0650a5, #0051ad, #0650a5 )
       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3)
       
    ul
@@ -36,6 +36,11 @@ header nav.nav
          padding: 7px
          cursor: pointer
 
+         @include base-mixins.mobile
+            color: white
+            border: solid #eeeeee00 2px
+            padding: 0
+
          &:hover
             background-image: linear-gradient(to right, #83ced800, #1576af31, #0999ec00)
             color: #0917db
@@ -46,12 +51,18 @@ header nav.nav
       li
          display: flex
          align-items: center
+         @include base-mixins.mobile   
+            padding: 15px 0
          
          a
             font-size: 1.1rem
             // font-weight: 500
             border-radius: 45px
             cursor: pointer
+
+            @include base-mixins.mobile
+               color: white
+            
 
             &:hover
                color: variables.$text-hover
