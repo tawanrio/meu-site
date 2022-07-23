@@ -14,10 +14,8 @@ header .home
          margin-top: 10%
       
       &-title
-         font-size: 3rem
-         @include base-mixins.mobile
-            font-size: 3.5rem 
-            // text-align: start
+        @include layouts-mixins.title-h1
+        text-align: center
 
       &-desc
          margin-top: 20px
@@ -44,7 +42,7 @@ header .home
       a
          @include layouts-mixins.center-content
          flex-direction: column
-         margin: 0 40px
+         margin: 0 15px 0 50px
          
          @include base-mixins.mobile
             margin: 0 15px

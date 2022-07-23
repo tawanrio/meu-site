@@ -6,7 +6,7 @@
 header .person
    @include layouts-mixins.center-content
    flex-direction: column
-   font-family: 'Montserrat Alternates', sans-serif
+   // font-family: 'Montserrat Alternates', sans-serif
 
    @include base-mixins.mobile
       margin-top: 5%
@@ -28,9 +28,7 @@ header .person
          margin: 0
       
    &-title
-      background-image: linear-gradient(to right, #c5bcb8 20%, #f5f3f1 40%, #c5bcb8 45%, #f5f3f1 95%)
-      -webkit-background-clip: text 
-      -webkit-text-fill-color: transparent
+      color: white
 
       @include base-mixins.mobile
          width: 50%
@@ -39,8 +37,9 @@ header .person
       
       .name
          font-size: 3.5rem
-         font-weight: 600
-         font-family: roboto
+         font-weight: 700
+         font-family: 'Oswald', sans-serif
+
 
          @include base-mixins.mobile
             // font-size: 3rem
@@ -48,14 +47,18 @@ header .person
       hr
          @include layouts-mixins.hr
          left: -15%
+         margin-top: -1%
+         height: 1px
 
          @include base-mixins.mobile
             width: 80%
             left: 0
    
       .dev
+         font-family: 'Cormorant SC', serif
+         margin-top: -3%
          font-size: 1.5rem
-         font-weight: 300
+         font-weight: 500
          
         
         

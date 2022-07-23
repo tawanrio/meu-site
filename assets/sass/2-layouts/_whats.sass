@@ -3,23 +3,26 @@
 
 section.secwhats
    width: 100%
+   font-family: 'Oswald', sans-serif
 
    .whats
       margin-top: 7%
-      background-color: #3b4d52
+      background-color: #3f5e94
       height: 60vh
       width: 100%
       transition:  .5s 
+      
       
       .content
          width: 65%
          transition:  .5s
          position: relative
-         top: -10%
-         height: 120%
+         top: -12%
+         height: 124%
          margin: auto
          border-radius: 20px
-         background: linear-gradient(to bottom ,#343533 -17% , #3b4d52, #3b4d52, #3b4d52, #343533 117% )
+         background: linear-gradient(to bottom ,#31394d -17% ,  #4972b9, #4972b9, #4972b9, #31394d 117% )
+         background: linear-gradient(to bottom ,#173d28 -17% ,  #4972b9, #3b7ca7, #4972b9, #173d28 117% )
 
 
          .header
@@ -29,6 +32,7 @@ section.secwhats
                display: none
 
             .title
+               
                margin-top: 1%
                font-size: 3rem
                color: #f5f3f1
@@ -37,7 +41,7 @@ section.secwhats
                   position: absolute
                   top: 3%
                   margin: 0 2%  
-                  color: #388f1d
+                  color: #28db91
                
             hr
                @include layouts-mixins.hr
@@ -49,6 +53,7 @@ section.secwhats
 
             i.btn-up
                @include layouts-mixins.whats-btn-toggle
+               margin-top: 1%
 
             form
                margin-top: 5%
@@ -61,45 +66,36 @@ section.secwhats
 
          
    .whats-toggle
-      margin-top: 7%
+      // margin-top: 0%
       background-color: variables.$secundary-bg-color
       height: 55%
-      // width: 100%
       transition:  .5s 
 
       .content
          box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3)
          transition:  .5s
          cursor: pointer
-         width: 35%
+         width: 25%
          top: 0
-         height: 110%
+         height: 100%
          position: relative
          margin: auto
-         border-radius: 100px
-         background: linear-gradient(to bottom ,#31394d -17% ,  #3f5e94, #3f5e94, #3f5e94, #31394d 117% )
+         border-radius: 80px 20px 80px 20px
 
          .header
-            // padding: 10px
             display: flex
             flex-direction: column
             justify-content: center
             
             i.btn-down
                @include layouts-mixins.whats-btn-toggle
+               margin-top: -.5px
 
             .title
-               margin: -1% 0 0 -7%
+               margin: -8% 0 0 0%
                font-size: 2rem
                color: #f5f3f1
                
-               i
-                  position: absolute
-                  top: 5%
-                  margin: 0 3%  
-                  font-size: 2.5rem
-                  color: #388f1d
-                  
                
             hr
                @include layouts-mixins.hr

@@ -1,13 +1,24 @@
 html {
-  font-weight: 300;
+  font-weight: 400;
   scroll-behavior: smooth;
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 425px) {
   html {
     font-size: 12px;
   }
+}
+html body {
+  scrollbar-width: thin;
+  scrollbar-color: blue transparent;
+}
+html body::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+html body::-webkit-scrollbar-thumb {
+  background-color: #5c93f3;
 }
 
 * {
@@ -26,7 +37,7 @@ a {
   color: #22223b;
 }
 a:hover {
-  color: #07a777;
+  color: #28db91;
 }
 
 p {
@@ -61,7 +72,11 @@ header .home-content {
   }
 }
 header .home-content-title {
-  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Cormorant SC", serif;
+  font-size: 3.5rem;
+  text-align: center;
+  text-align: center;
 }
 @media (max-width: 425px) {
   header .home-content-title {
@@ -100,7 +115,7 @@ header .home-social-media a {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  margin: 0 40px;
+  margin: 0 15px 0 50px;
 }
 @media (max-width: 425px) {
   header .home-social-media a {
@@ -131,7 +146,7 @@ header .home-social-media a:hover .social-media-subtitulo {
 }
 header .home-social-media a:hover i {
   color: #f5f2e6;
-  background-color: #07a777;
+  background-color: #28db91;
   transition: 0.4s;
 }
 @media (max-width: 425px) {
@@ -159,7 +174,7 @@ header {
   height: 96vh;
   background-repeat: no-repeat;
   background-image: url("../img/backgrounds/bg-person6.svg");
-  background-image: url("../img/backgrounds/teste6.png");
+  background-image: url("../img/backgrounds/teste9.png");
   background-position-x: -70px;
   background-size: 63%;
 }
@@ -230,7 +245,12 @@ main #portfolio-bg {
   left: 0;
   width: 100%;
   z-index: -1;
-  top: 238%;
+  top: 233%;
+}
+@media (max-width: 425px) {
+  main #portfolio-bg {
+    top: 180%;
+  }
 }
 
 footer {
@@ -247,7 +267,6 @@ header .person {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  font-family: "Montserrat Alternates", sans-serif;
 }
 @media (max-width: 425px) {
   header .person {
@@ -271,9 +290,7 @@ header .person #foto-m {
   }
 }
 header .person-title {
-  background-image: linear-gradient(to right, #c5bcb8 20%, #f5f3f1 40%, #c5bcb8 45%, #f5f3f1 95%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 @media (max-width: 425px) {
   header .person-title {
@@ -282,8 +299,8 @@ header .person-title {
 }
 header .person-title .name {
   font-size: 3.5rem;
-  font-weight: 600;
-  font-family: roboto;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
 }
 header .person-title hr {
   width: 130%;
@@ -294,6 +311,8 @@ header .person-title hr {
   height: 1.5px;
   background-image: linear-gradient(to right, transparent, #CCC, transparent);
   left: -15%;
+  margin-top: -1%;
+  height: 1px;
 }
 @media (max-width: 425px) {
   header .person-title hr {
@@ -302,8 +321,10 @@ header .person-title hr {
   }
 }
 header .person-title .dev {
+  font-family: "Cormorant SC", serif;
+  margin-top: -3%;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 header nav.nav {
@@ -334,16 +355,16 @@ header nav.nav ul {
   justify-content: space-evenly;
 }
 header nav.nav ul li#cv {
-  border: solid #ff0000 1px;
-  color: #ff0000;
+  border: solid #ee0000 2px;
+  color: #ff0a0a;
   border-radius: 20px;
   padding: 7px;
-  font-weight: 500;
   cursor: pointer;
 }
 header nav.nav ul li#cv:hover {
-  color: #DDA15E;
-  border: solid #DDA15E 1px;
+  background-image: linear-gradient(to right, rgba(131, 206, 216, 0), rgba(21, 118, 175, 0.1921568627), rgba(9, 153, 236, 0));
+  color: #0917db;
+  border: solid #0917db 2px;
   transition: 0.3s;
 }
 header nav.nav ul li {
@@ -352,36 +373,39 @@ header nav.nav ul li {
 }
 header nav.nav ul li a {
   font-size: 1.1rem;
-  font-weight: 500;
   border-radius: 45px;
   cursor: pointer;
 }
 header nav.nav ul li a:hover {
-  color: #07a777;
+  color: #28db91;
   text-decoration: underline;
 }
 
-main .skill {
-  font-family: "Montserrat", sans-serif;
-}
 @media (max-width: 425px) {
   main .skill {
-    background-image: linear-gradient(to top, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1);
+    background-image: linear-gradient(to top, #f5f3f1, #e7e4e4, #f5f3f1, #e7e4e4, #f5f3f1);
     background-repeat: no-repeat;
   }
 }
 main .skill-title {
-  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Cormorant SC", serif;
+  font-size: 3rem;
   text-align: center;
-  margin: 0 0 10% 0%;
+  margin-bottom: 10%;
 }
 @media (max-width: 425px) {
   main .skill-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 425px) {
+  main .skill-title {
+    margin-top: 10%;
   }
 }
 main .skill-card {
-  height: 75vh;
+  height: 70vh;
   display: flex;
   margin: 0 2%;
 }
@@ -430,12 +454,14 @@ main .skill-card-content {
 }
 main .skill-card-content-title {
   margin-bottom: 25px;
-  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Cormorant SC", serif;
+  font-size: 2.2rem;
   text-align: center;
 }
 @media (max-width: 425px) {
   main .skill-card-content-title {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
   }
 }
 main .skill-card-content hr {
@@ -450,6 +476,7 @@ main .skill-card-content hr {
 }
 main .skill-card-content p {
   margin: 10px 0;
+  text-indent: 0;
 }
 main .skill-card-skill {
   text-align: start;
@@ -467,7 +494,7 @@ main .skill-card-skill {
   main .skill-card-skill ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 main .skill-card-skill ul i {
@@ -481,7 +508,6 @@ main .skill-card-skill ul i {
 }
 main .skill-card-skill ul li {
   cursor: pointer;
-  font-weight: 500;
 }
 @media (max-width: 425px) {
   main .skill-card-skill ul li {
@@ -489,25 +515,29 @@ main .skill-card-skill ul li {
   }
 }
 main .skill-card-skill ul li:hover {
-  color: #07a777;
+  color: #28db91;
 }
 main .skill-card-skill ul li:hover i {
   color: #f5f2e6;
-  background-color: #07a777;
+  background-color: #28db91;
   transition: 0.4s;
 }
 
-main .portfolio {
-  font-family: "Montserrat", sans-serif;
-}
 main .portfolio-title {
-  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Cormorant SC", serif;
+  font-size: 3rem;
   text-align: center;
   margin: 3% 0;
 }
 @media (max-width: 425px) {
   main .portfolio-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 425px) {
+  main .portfolio-title {
+    margin-top: 10%;
   }
 }
 main .portfolio-carousel {
@@ -518,6 +548,12 @@ main .portfolio-carousel {
   align-items: center;
   text-align: center;
   justify-content: space-evenly;
+}
+@media (max-width: 425px) {
+  main .portfolio-carousel {
+    flex-direction: column;
+    height: 120vh;
+  }
 }
 main .portfolio-carousel-card {
   box-shadow: 0px -5px 15px -5px rgba(0, 0, 0, 0.3);
@@ -530,6 +566,12 @@ main .portfolio-carousel-card {
   background-size: 120%;
   transition: transform 0.5s ease;
 }
+@media (max-width: 425px) {
+  main .portfolio-carousel-card {
+    width: 80%;
+    margin-top: 20%;
+  }
+}
 main .portfolio-carousel-card:hover {
   margin-top: -4px;
   transform: scale(1.06);
@@ -541,12 +583,14 @@ main .portfolio-carousel-card-header {
 }
 main .portfolio-carousel-card-header-title {
   font-size: 1.2rem;
-  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Cormorant SC", serif;
+  font-size: 1.8rem;
   text-align: center;
 }
 @media (max-width: 425px) {
   main .portfolio-carousel-card-header-title {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
 }
 main .portfolio-carousel-card-header-title hr {
@@ -588,10 +632,11 @@ main .portfolio-carousel-card-main-img img {
 
 section.secwhats {
   width: 100%;
+  font-family: "Oswald", sans-serif;
 }
 section.secwhats .whats {
   margin-top: 7%;
-  background-color: #3b4d52;
+  background-color: #3f5e94;
   height: 60vh;
   width: 100%;
   transition: 0.5s;
@@ -600,11 +645,12 @@ section.secwhats .whats .content {
   width: 65%;
   transition: 0.5s;
   position: relative;
-  top: -10%;
-  height: 120%;
+  top: -12%;
+  height: 124%;
   margin: auto;
   border-radius: 20px;
-  background: linear-gradient(to bottom, #343533 -17%, #3b4d52, #3b4d52, #3b4d52, #343533 117%);
+  background: linear-gradient(to bottom, #31394d -17%, #4972b9, #4972b9, #4972b9, #31394d 117%);
+  background: linear-gradient(to bottom, #173d28 -17%, #4972b9, #3b7ca7, #4972b9, #173d28 117%);
 }
 section.secwhats .whats .content .header {
   padding: 25px 0 0 0;
@@ -621,7 +667,7 @@ section.secwhats .whats .content .header .title i {
   position: absolute;
   top: 3%;
   margin: 0 2%;
-  color: #388f1d;
+  color: #28db91;
 }
 section.secwhats .whats .content .header hr {
   width: 130%;
@@ -647,11 +693,12 @@ section.secwhats .whats .content .main i.btn-up {
   cursor: pointer;
   transition: transform 0.5s ease;
   display: block;
+  margin-top: 1%;
 }
 section.secwhats .whats .content .main i.btn-up:hover {
   transform: scale(1.3);
   transition: 0.2s;
-  color: #07a777;
+  color: #28db91;
 }
 section.secwhats .whats .content .main form {
   margin-top: 5%;
@@ -665,7 +712,6 @@ section.secwhats .whats .content .main form textarea, section.secwhats .whats .c
   box-shadow: 0px 10px 15px -15px rgb(0, 0, 0);
 }
 section.secwhats .whats-toggle {
-  margin-top: 7%;
   background-color: #f5f2e6;
   height: 55%;
   transition: 0.5s;
@@ -674,13 +720,12 @@ section.secwhats .whats-toggle .content {
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
   cursor: pointer;
-  width: 35%;
+  width: 25%;
   top: 0;
-  height: 110%;
+  height: 100%;
   position: relative;
   margin: auto;
-  border-radius: 100px;
-  background: linear-gradient(to bottom, #31394d -17%, #3f5e94, #3f5e94, #3f5e94, #31394d 117%);
+  border-radius: 80px 20px 80px 20px;
 }
 section.secwhats .whats-toggle .content .header {
   display: flex;
@@ -697,23 +742,17 @@ section.secwhats .whats-toggle .content .header i.btn-down {
   cursor: pointer;
   transition: transform 0.5s ease;
   display: block;
+  margin-top: -0.5px;
 }
 section.secwhats .whats-toggle .content .header i.btn-down:hover {
   transform: scale(1.3);
   transition: 0.2s;
-  color: #07a777;
+  color: #28db91;
 }
 section.secwhats .whats-toggle .content .header .title {
-  margin: -1% 0 0 -7%;
+  margin: -8% 0 0 0%;
   font-size: 2rem;
   color: #f5f3f1;
-}
-section.secwhats .whats-toggle .content .header .title i {
-  position: absolute;
-  top: 5%;
-  margin: 0 3%;
-  font-size: 2.5rem;
-  color: #388f1d;
 }
 section.secwhats .whats-toggle .content .header hr {
   width: 130%;
@@ -743,7 +782,7 @@ section.secwhats .whats-toggle .content .main {
 }
 .footer li a:hover, .footer li a:hover i, .footer p a:hover, .footer p a:hover i {
   transform: 0.4s;
-  color: #07a777;
+  color: #28db91;
 }
 .footer-top {
   margin: 0 auto;
@@ -752,7 +791,6 @@ section.secwhats .whats-toggle .content .main {
   align-items: center;
   text-align: center;
   justify-content: space-evenly;
-  align-items: flex-start;
 }
 .footer-top-about {
   max-width: 50%;

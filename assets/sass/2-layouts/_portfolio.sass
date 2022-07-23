@@ -1,18 +1,26 @@
 @use '../1-base/_variables'
 @use 'layouts-mixins'
+@use '../1-base/_base-mixins'
 
 main .portfolio
    // height: 104vh
-   font-family: 'Montserrat', sans-serif
+   // font-family: 'Montserrat', sans-serif
    
    &-title
       @include layouts-mixins.title-h2
       margin: 3% 0
 
+      @include base-mixins.mobile
+         margin-top: 10%
    &-carousel
       height: 75vh
       @include layouts-mixins.center-content
       justify-content: space-evenly
+
+      @include base-mixins.mobile
+         flex-direction: column
+         height: 120vh
+         // margin-top: 10%
 
 
       &-card
@@ -25,7 +33,13 @@ main .portfolio
          background-color: variables.$secundary-bg-color
          background-image: url('../img/backgrounds/bg-quadrados.png')
          background-size: 120%
+         
          transition: transform .5s ease
+
+         @include base-mixins.mobile
+            width: 80%
+            margin-top: 20%
+         
 
          &:hover
             margin-top: -4px 
