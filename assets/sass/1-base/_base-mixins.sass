@@ -1,4 +1,20 @@
 @mixin mobile
-   @media (max-width: 425px)
+   @media (max-width: 625px)
+      @content
+
+@mixin wid768
+   @media (max-width: 820px)
+      @content
+      
+@mixin wid1080
+   @media (max-width: 1080px)
+      @content
+      
+@mixin wid1280
+   @media (max-width: 1280px)
+      @content
+
+@mixin wid2000
+   @media (min-width: 1700px)
       @content
       

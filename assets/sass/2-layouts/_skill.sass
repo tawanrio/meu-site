@@ -4,23 +4,23 @@
 
 
 main .skill
+  width: 100%
   // font-family: 'Montserrat', sans-serif
 
   &-title
     @include layouts-mixins.title-h2
-    margin-bottom: 10%
+
     @include base-mixins.mobile
       margin-bottom: 0%
       margin-top: 15%
     
 
   &-card
-    height: 70vh
+    padding: 20px 0
     display: flex
-    margin: 0 2%
+    // margin: 0 2%
 
     @include base-mixins.mobile
-      height: 70vh
       display: grid
       grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr 1fr 1fr
@@ -79,6 +79,7 @@ main .skill
         margin-top: 0
         
       ul
+        padding: 0 10px
         @include base-mixins.mobile
           display: flex
           flex-wrap: wrap

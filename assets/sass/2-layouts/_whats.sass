@@ -4,12 +4,14 @@
 
 section.secwhats
    width: 100%
+   padding: 5px 0
    font-family: 'Oswald', sans-serif
 
    .whats
       margin-top: 7%
       background-color: #3f5e94
-      height: 65vh
+      height: 75%
+      // padding: -10% 0
       width: 100%
       transition:  .5s 
       
@@ -85,6 +87,20 @@ section.secwhats
          position: relative
          margin: auto
          border-radius: 80px 20px 80px 20px
+
+         @include base-mixins.wid2000
+            width: 35%
+            padding-top: 45px
+
+         @include base-mixins.wid1280
+            height: 110%
+
+         @include base-mixins.wid1080
+            height: 115%
+            width: 35%
+
+         @include base-mixins.wid768
+            height: 125%
 
          @include base-mixins.mobile
             width: 60%

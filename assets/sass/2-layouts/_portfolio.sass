@@ -3,24 +3,35 @@
 @use '../1-base/_base-mixins'
 
 main .portfolio
-   // height: 104vh
+   width: 100%
    // font-family: 'Montserrat', sans-serif
+
+   background-image: url('../img/backgrounds/onda5.png')
+   background-repeat: no-repeat
+   background-size: 130%
+   background-position-y: -270px
+
+   @include base-mixins.mobile
+      background-position-y: 0
+
+   @include base-mixins.wid768
+      background-position-y: -170px
+
+   @include base-mixins.wid2000
+      background-position-y: -450px
    
    &-title
       @include layouts-mixins.title-h2
-      margin: 3% 0
+      margin: 3% 0 6% 0
 
       @include base-mixins.mobile
          margin-top: 10%
    &-carousel
-      height: 75vh
       @include layouts-mixins.center-content
       justify-content: space-evenly
 
       @include base-mixins.mobile
          flex-direction: column
-         // height: 100vh
-         // margin-top: 10%
 
 
       &-card
@@ -28,9 +39,9 @@ main .portfolio
          box-shadow: 0px -5px 15px -5px rgba(0,0,0,0.3)
          padding: 20px
          border-radius: 5%
-         height: 450px
+         // height: 400px
          width: 31%
-         background-color: variables.$secundary-bg-color
+         background-color: #def8f0
          background-image: url('../img/backgrounds/bg-quadrados.png')
          background-size: 120%
          
@@ -64,16 +75,17 @@ main .portfolio
             height: 75%
 
             &-desc
+               padding: 20px 0
                flex-grow: 1
                ul 
                   li
-                     padding: 2px 0
+                     padding: 5px 0
                      list-style: inside
                      text-align: start
 
             &-img
                margin-bottom: 5% 
-               height: 40%
+               height: 47%
                p
                   padding: 5px 0
                   font-size: .7rem

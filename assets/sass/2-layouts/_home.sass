@@ -5,12 +5,21 @@
 header .home
    @include layouts-mixins.center-content
    flex-direction: column
-   padding: 2%
-   height: 65
    
    &-content
       font-size: 1.1rem
-      margin-top: 15%
+      margin-top: 20%
+      padding: 0 5% 0 0
+
+      @include base-mixins.wid1280
+         margin-top: 20%
+
+      @include base-mixins.wid1080
+         margin-top: 20%
+
+      @include base-mixins.wid768
+         margin-top: 30%
+
       @include base-mixins.mobile
          margin-top: 5%
       
@@ -32,6 +41,8 @@ header .home
    &-social-media
       display: flex
       margin-top: 5%
+      @include base-mixins.wid1080
+         margin: 0 0 0 35px
 
       .social-media-subtitulo
          font-size: 1.5rem
@@ -44,6 +55,9 @@ header .home
          @include layouts-mixins.center-content
          flex-direction: column
          margin: 0 15px 0 50px
+
+         @include base-mixins.wid1080
+            margin: 0 0 0 10px
          
          @include base-mixins.mobile
             margin: 1% 15px
@@ -53,10 +67,15 @@ header .home
             font-size: 4rem
             color: variables.$dark-color
             border-radius: 100%
-            height: 85px
-            width: 90px
+            height: 95px
+            width: 95px
             padding-top: 10px
             cursor: pointer
+
+            @include base-mixins.wid1080
+               font-size: 3.5rem
+               height: 75px
+               width: 75px
 
             @include base-mixins.mobile
                border-radius: 0
@@ -72,6 +91,9 @@ header .home
          i
             color: variables.$secundary-bg-color
             background-color: variables.$text-hover
+         i.in, i.f
+            background-color: #4487ec
+
             transition: .4s
             @include base-mixins.mobile
                color: variables.$dark-color
