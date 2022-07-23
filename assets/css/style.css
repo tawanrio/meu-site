@@ -204,9 +204,9 @@ header .home-social-media a:hover i.in, header .home-social-media a:hover i.f {
 
 body {
   display: grid;
-  background-color: #f5f2e6;
   background-repeat: no-repeat;
   background-image: linear-gradient(to top, #f1f1f1, #effcfd, #f1f1f1);
+  background-size: 125%;
   margin: 0 auto;
 }
 
