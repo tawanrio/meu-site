@@ -1,0 +1,159 @@
+@use '../1-base/variables'
+@use 'layouts-mixins'
+@use '../1-base/_base-mixins'
+
+   
+main .skill .skill-menu
+  margin: 10px 0
+  &-top
+    background-color: #6fa2d1f8
+    height: 4px
+  
+  &-bottom
+    background-color: #6fa2d1f8
+    height: 6px
+
+
+  &-content
+    background-color: #3a3c42
+    font-size: .8rem
+    padding: 30px 0 60px 0
+    &-title
+      padding: 5px 0 15px 0
+      color: white
+      @include layouts-mixins.title-h3
+      i
+        color: white
+        margin-right: 10px
+    &-carousel
+      padding: 15px 0 10px 0
+      @include layouts-mixins.center-content
+
+      .carousel-arrow
+        margin: 0 40px
+        font-size: 2.5rem
+        transition: transform .5s ease
+        cursor: pointer
+        color: #6fa2d1f8
+        transition: .5s
+
+        &:hover
+          transform: scale(1.2)
+          transition: .5s
+          color: variables.$text-hover
+
+      &-card
+        box-shadow: 0px 0px 10px -1px #6b7cc773
+        border: solid white 2px
+        color: white
+        padding: 5px 20px
+        display: flex
+        height: 450px
+        flex-direction: column
+        border-radius: 10px
+        width: 50%
+        min-height: 400px
+        background-color: #0000002c
+        // background-image: url('../img/backgrounds/bg-quadrados.png')
+        // background-size: 80%
+        
+        transition: transform .5s ease
+        transition: .8s
+
+        @include base-mixins.mobile
+            width: 80%
+            // margin-top: 20%
+        
+        &:hover
+            // margin-top: -4px 
+            transform: scale(1.003)
+            transition: .5s
+            box-shadow: 0px 0px 15px 1px #6b7cc773
+        
+       
+        &-title
+          @include layouts-mixins.title-h4
+          font-size: 2em
+          
+        hr
+            @include layouts-mixins.hr
+            width: 100%
+            top: 0
+
+
+        &-desc
+          padding: 20px 0
+          flex-grow: 1
+          
+          ul 
+              li
+                padding: 5px 0
+                list-style: inside
+                text-align: start
+
+        &-img
+          height: 47%
+          padding-bottom: 10px
+
+          p 
+            text-indent: 0
+            color: #ffffff60
+            padding: 5px 0
+            font-size: .8em
+
+            &:hover
+              color: variables.$text-hover
+          img
+            margin: 0 auto
+            width: 50%
+            box-shadow: 0px 0px 15px -4px #ffffff
+
+    &-nav
+      ul
+          padding: 0px 10px
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
+
+          @include base-mixins.mobile
+
+          i
+            width: 25px
+            height: 22px
+            padding: 4px 0
+            color: #60daff4f
+            border-radius: 100%
+            text-align: center
+            
+          li
+            cursor: pointer
+            color: #60daff4f
+            margin: 0 10px
+            @include base-mixins.mobile
+              margin: 0 5px
+
+            
+
+            &:hover 
+              color: #60daff
+              color: variables.$text-hover
+
+              i
+                color: #3A3C42
+                background-color: variables.$text-hover
+                background-color: #60daff
+                transition: .4s
+
+          li.active
+            // color: variables.$text-hover
+            color: #fff
+            font-weight: 600
+
+            i
+              // color: variables.$secundary-bg-color
+              // color: black
+              // background-color: #60daff
+              color: variables.$secundary-bg-color
+              background-color: #1b61ac
+              // background-color: variables.$text-hover
+              transition: .4s

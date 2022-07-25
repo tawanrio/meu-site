@@ -27,71 +27,69 @@ main .portfolio
 
       @include base-mixins.mobile
          margin-top: 10%
-   &-carousel
+   &-grid
+      width: 85%
+      flex-wrap: wrap
+
       @include layouts-mixins.center-content
-      justify-content: space-evenly
 
       @include base-mixins.mobile
          flex-direction: column
 
-
       &-card
-         // border: solid black .5px
-         box-shadow: 0px -5px 15px -5px rgba(0,0,0,0.3)
+         box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.3)
          padding: 20px
+         margin: 15px
          border-radius: 5%
-         // height: 400px
-         width: 31%
-         background-color: #def8f0
+         // display: flex
+         // flex-direction: column
+         // justify-content: space-evenly
+         width: 22%
+         background-color: #a8c0eb31
          background-image: url('../img/backgrounds/bg-quadrados.png')
-         background-size: 120%
-         
-         transition: transform .5s ease
+         background-size: 100%
+         transition: .5s
 
          @include base-mixins.mobile
             width: 80%
-            // margin-top: 20%
-         
 
          &:hover
-            margin-top: -4px 
-            transform: scale(1.06)
+            transform: scale(1.01)
             transition: .5s
-            box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3)
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3)
+
+         &-title
+            @include layouts-mixins.title-h4
+            font-size: 1.1rem
+            font-weight: 700
+            
+            hr
+               @include layouts-mixins.hr
+               width: 100%
+
          
-         &-header
-            height: 15%
+         // display: flex
+         // flex-direction: column
+         // // height: 75%
+         // flex-grow: 1
 
-            &-title
-               font-size: 1.2rem
-               @include layouts-mixins.title-h4
-               
-               hr
-                  @include layouts-mixins.hr
-                  width: 100%
-
-         &-main
-            display: flex
-            flex-direction: column
-            height: 75%
-
-            &-desc
-               padding: 20px 0
-               flex-grow: 1
-               ul 
-                  li
-                     padding: 5px 0
-                     list-style: inside
-                     text-align: start
-
-            &-img
-               margin-bottom: 5% 
-               height: 47%
-               p
-                  padding: 5px 0
+         &-desc
+            ul 
+               li
+                  padding: 5px 0 10px 0
                   font-size: .7rem
-               img
-                  margin: 0 auto
-                  width: 85%
-                  box-shadow: 0px 0px 40px -10px rgba(0,0,0,1)
+                  list-style: none
+                  text-align: center
+
+         &-img
+            // margin-bottom: 5% 
+            // padding-top: 20px
+            // height: 47%
+            p
+               // padding: 5px 0
+               font-size: .7rem
+            img
+               margin: 0 auto
+               width: 85%
+               box-shadow: 0px 0px 7px 0px rgba(0,0,0,1)
 
