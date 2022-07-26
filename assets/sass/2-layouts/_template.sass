@@ -4,85 +4,29 @@
 
 body
    display: grid
-   // grid-template-columns: 1fr
-   // grid-template-rows: 1fr
-   // grid-template-areas: "header" "main" "footer"
-   // background-color: red
-   background-repeat: no-repeat
    background-image: linear-gradient(to top, #f1f1f1, #effcfd, #f1f1f1 )
-   background-size: 125%
    margin: 0 auto
 
-
-
-
 header
-   // grid-area: header
+   // width: 50%
    display: flex
-   padding-bottom: 5% 
-   background-repeat: no-repeat
-   // background-image: url('../img/backgrounds/bg-person6.svg')
-   // background-image: url('../img/backgrounds/teste2.png')
-   // background-image: url('../img/backgrounds/teste5.png')
-   background-image: url('../img/backgrounds/teste9.png')
-   background-position-x: -5vw
-   background-position-y: -10px
-   background-size: 900px
-
-   @include base-mixins.wid2000
-      background-position-x: -3vw
-      background-position-y: -10px
-      background-size: 1080px
-
-   @include base-mixins.wid1280
-      background-position-x: -7vw
-      background-position-y: 0px
-      background-size: 820px
-
-   @include base-mixins.wid1080
-      background-position-x: -7vw
-      background-position-y: 0px
-      background-size: 680px
-
-   @include base-mixins.wid768
-      background-position-x: -16vw
-      background-position-y: 0px
-      background-size: 580px
-
+   padding-bottom: 5%
 
    @include base-mixins.mobile
-      background-position-x: 0px
-      background-position-y: -280.5vh
-      background-size: 65vh
-      // height: 100vh
-      flex-direction: column
+      flex-direction: column 
+      
+      .person
+         img#logo
+            display: none
+         h2#name
+            display: block
+            
 
-   .person
-      width: 38%
-      @include base-mixins.mobile
-         width: 100%
+   .divisor
+      width: 5%
 
-   .home
-      width: 62%
-      @include base-mixins.mobile
-         width: 100%
-
-   
-   #person-bg
-      position: absolute
-      top: 0%
-      left: -7%
-      width: 65%
-      z-index: -1
-
-      @include base-mixins.mobile
-         width: 115%
-         left: 1%
-         top: -24.5%
-         overflow-x: hidden
    
 main
-   // grid: main
    width: 100%
    @include layouts-mixins.center-content
    flex-direction: column
@@ -96,8 +40,6 @@ main
    section.skill
       padding: 0
       .skill-card
-         // background-color: yellow
-         
          background-repeat: no-repeat
          background-image: url('../img/backgrounds//bg-pontilhado2.png')
          background-size: 100%
@@ -111,21 +53,7 @@ main
       top: 103vh
       z-index: -1
 
-   // #portfolio-bg
-   //    position: absolute
-   //    left: 0
-   //    width: 100%
-   //    z-index: -1
-   //    top: 100rem
-
-   //    @include base-mixins.wid1280
-   //       top: 200%
-
-   //    @include base-mixins.mobile
-   //       top: 265%
-
 footer
-   // grid-area: footer
    background-color: black
    padding: 2rem 0
    margin-top: 10%

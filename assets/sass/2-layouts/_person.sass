@@ -4,77 +4,21 @@
 
 
 header .person
-   @include layouts-mixins.center-content
-   flex-direction: column
-   // font-family: 'Montserrat Alternates', sans-serif
-
-   @include base-mixins.mobile
-      padding: 3% 0
-      margin-top: 5%
-      flex-direction: row
-      // background-color: variables.$bg-color
-      background-image: url('../img/backgrounds/background3.jpg')
-      background-size: 100%
-      border-radius: 35px 200px 35px 150px
-      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5)
-      
-
-   #foto-m
-      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5)
-      margin-top: 30%
-      width: 70%
-      border-radius: 12%
-
-      @include base-mixins.wid2000
-         margin-top: 25%
-      @include base-mixins.wid1080
-         margin-top: 35%
-
-      @include base-mixins.wid768
-         margin-top: 25%
-
-      @include base-mixins.mobile
-         width: 27%
-         margin: 0
-      
-   &-title
-      color: white
-
-      @include base-mixins.mobile
-         width: 50%
-         // margin-top: 5%
-      
-      
-      .name
-         font-size: 3.5rem
-         font-weight: 700
-         font-family: 'Oswald', sans-serif
-
-
-         @include base-mixins.mobile
-            // font-size: 3rem
-            margin: -2% 0
-
-      hr
-         @include layouts-mixins.hr
-         left: -15%
-         margin-top: -1%
-         height: 1px
-
-         @include base-mixins.mobile
-            width: 80%
-            left: 0
-            // margin: 0px 0 2px
    
-      .dev
-         font-family: 'Cormorant SC', serif
-         margin-top: -3%
-         font-size: 1.5rem
-         font-weight: 500
+   
+   
+   #name
+      display: none
+      margin-top: 10%
+      @include layouts-mixins.title-h1
 
-         @include base-mixins.mobile
-            margin-top: 0
-         
+   #logo
+      position: relative
+      // left: 22%
+      width: 155%
+      z-index: -1
+
+
         
         
          

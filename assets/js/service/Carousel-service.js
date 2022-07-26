@@ -21,15 +21,11 @@ export class Carousel{
          }
          const elementosCard = this.createElements(this.dataCarousel[card], this.initCarousel, carousel)
          this.controller.renderCarousel(elementosCard)
-
       })
    }
 
    createElements(dataCarousel, orderId, carousel){
 
-      
-
-      
       const dados = dataCarousel[orderId]
 
       // CRIA O MENU COM EVENTO CLICK
@@ -138,9 +134,6 @@ export class Carousel{
        this.createCarousel()
 
       },this.timerSetCard)
-
-      
-
    }
 
    changeOrderByArrow(side, card, carousel){

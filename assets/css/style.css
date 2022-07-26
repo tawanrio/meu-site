@@ -1,7 +1,6 @@
 html {
   font-weight: 400;
   scroll-behavior: smooth;
-  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
@@ -79,27 +78,12 @@ header .home {
 }
 header .home-content {
   font-size: 1.1rem;
-  margin-top: 20%;
-  padding: 0 5% 0 0;
-}
-@media (max-width: 1280px) {
-  header .home-content {
-    margin-top: 20%;
-  }
-}
-@media (max-width: 1080px) {
-  header .home-content {
-    margin-top: 20%;
-  }
-}
-@media (max-width: 820px) {
-  header .home-content {
-    margin-top: 30%;
-  }
+  padding: 0 20px;
+  margin-top: 15%;
 }
 @media (max-width: 625px) {
   header .home-content {
-    margin-top: 5%;
+    margin-top: 0;
   }
 }
 header .home-content-title {
@@ -204,87 +188,27 @@ header .home-social-media a:hover i.in, header .home-social-media a:hover i.f {
 
 body {
   display: grid;
-  background-repeat: no-repeat;
   background-image: linear-gradient(to top, #f1f1f1, #effcfd, #f1f1f1);
-  background-size: 125%;
   margin: 0 auto;
 }
 
 header {
   display: flex;
   padding-bottom: 5%;
-  background-repeat: no-repeat;
-  background-image: url("../img/backgrounds/teste9.png");
-  background-position-x: -5vw;
-  background-position-y: -10px;
-  background-size: 900px;
-}
-@media (min-width: 1700px) {
-  header {
-    background-position-x: -3vw;
-    background-position-y: -10px;
-    background-size: 1080px;
-  }
-}
-@media (max-width: 1280px) {
-  header {
-    background-position-x: -7vw;
-    background-position-y: 0px;
-    background-size: 820px;
-  }
-}
-@media (max-width: 1080px) {
-  header {
-    background-position-x: -7vw;
-    background-position-y: 0px;
-    background-size: 680px;
-  }
-}
-@media (max-width: 820px) {
-  header {
-    background-position-x: -16vw;
-    background-position-y: 0px;
-    background-size: 580px;
-  }
 }
 @media (max-width: 625px) {
   header {
-    background-position-x: 0px;
-    background-position-y: -280.5vh;
-    background-size: 65vh;
     flex-direction: column;
   }
-}
-header .person {
-  width: 38%;
-}
-@media (max-width: 625px) {
-  header .person {
-    width: 100%;
+  header .person img#logo {
+    display: none;
+  }
+  header .person h2#name {
+    display: block;
   }
 }
-header .home {
-  width: 62%;
-}
-@media (max-width: 625px) {
-  header .home {
-    width: 100%;
-  }
-}
-header #person-bg {
-  position: absolute;
-  top: 0%;
-  left: -7%;
-  width: 65%;
-  z-index: -1;
-}
-@media (max-width: 625px) {
-  header #person-bg {
-    width: 115%;
-    left: 1%;
-    top: -24.5%;
-    overflow-x: hidden;
-  }
+header .divisor {
+  width: 5%;
 }
 
 main {
@@ -329,98 +253,18 @@ footer {
   margin-top: 10%;
 }
 
-header .person {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-@media (max-width: 625px) {
-  header .person {
-    padding: 3% 0;
-    margin-top: 5%;
-    flex-direction: row;
-    background-image: url("../img/backgrounds/background3.jpg");
-    background-size: 100%;
-    border-radius: 35px 200px 35px 150px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-header .person #foto-m {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  margin-top: 30%;
-  width: 70%;
-  border-radius: 12%;
-}
-@media (min-width: 1700px) {
-  header .person #foto-m {
-    margin-top: 25%;
-  }
-}
-@media (max-width: 1080px) {
-  header .person #foto-m {
-    margin-top: 35%;
-  }
-}
-@media (max-width: 820px) {
-  header .person #foto-m {
-    margin-top: 25%;
-  }
-}
-@media (max-width: 625px) {
-  header .person #foto-m {
-    width: 27%;
-    margin: 0;
-  }
-}
-header .person-title {
-  color: white;
-}
-@media (max-width: 625px) {
-  header .person-title {
-    width: 50%;
-  }
-}
-header .person-title .name {
-  font-size: 3.5rem;
+header .person #name {
+  display: none;
+  margin-top: 10%;
   font-weight: 700;
-  font-family: "Oswald", sans-serif;
-}
-@media (max-width: 625px) {
-  header .person-title .name {
-    margin: -2% 0;
-  }
-}
-header .person-title hr {
-  width: 130%;
-  position: relative;
-  top: -5%;
-  border: 0;
-  margin: 0 auto;
-  height: 1.5px;
-  background-image: linear-gradient(to right, transparent, #CCC, transparent);
-  left: -15%;
-  margin-top: -1%;
-  height: 1px;
-}
-@media (max-width: 625px) {
-  header .person-title hr {
-    width: 80%;
-    left: 0;
-  }
-}
-header .person-title .dev {
   font-family: "Cormorant SC", serif;
-  margin-top: -3%;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 3.5rem;
+  text-align: center;
 }
-@media (max-width: 625px) {
-  header .person-title .dev {
-    margin-top: 0;
-  }
+header .person #logo {
+  position: relative;
+  width: 155%;
+  z-index: -1;
 }
 
 header nav.nav {
@@ -428,7 +272,7 @@ header nav.nav {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: 65px;
+  top: 50px;
   right: 14vw;
   width: 70%;
   height: 45px;
@@ -437,9 +281,14 @@ header nav.nav {
   border-radius: 30px 0px 0px 30px;
   box-shadow: -10px 10px 15px -10px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 820px) {
+@media (max-width: 1080px) {
   header nav.nav {
     top: 45px;
+  }
+}
+@media (max-width: 820px) {
+  header nav.nav {
+    top: 35px;
   }
 }
 @media (max-width: 625px) {
@@ -515,8 +364,7 @@ main .skill-title {
 }
 @media (max-width: 625px) {
   main .skill-title {
-    margin-bottom: 0%;
-    margin-top: 15%;
+    margin-top: 10%;
   }
 }
 main .skill-card {
@@ -527,9 +375,11 @@ main .skill-card {
 }
 @media (max-width: 625px) {
   main .skill-card {
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40% 1fr 10%;
+    grid-template-rows: 1fr 1fr 10%;
     grid-template-areas: "content" "img" "skill";
   }
 }
@@ -553,7 +403,7 @@ main .skill-card-img img {
 }
 @media (max-width: 625px) {
   main .skill-card-img img {
-    width: 55vw;
+    width: 65vw;
   }
 }
 main .skill-card-content {
@@ -705,11 +555,10 @@ main .skill .skill-menu-content-carousel-card {
   color: white;
   padding: 5px 20px;
   display: flex;
-  height: 450px;
   flex-direction: column;
   border-radius: 10px;
   width: 50%;
-  min-height: 400px;
+  min-height: 450px;
   background-color: rgba(0, 0, 0, 0.1725490196);
   transition: transform 0.5s ease;
   transition: 0.8s;
@@ -717,6 +566,7 @@ main .skill .skill-menu-content-carousel-card {
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-card {
     width: 80%;
+    min-height: 200px;
   }
 }
 main .skill .skill-menu-content-carousel-card:hover {
@@ -736,6 +586,11 @@ main .skill .skill-menu-content-carousel-card-title {
     font-size: 2.3rem;
   }
 }
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-carousel-card-title {
+    font-size: 1.2rem;
+  }
+}
 main .skill .skill-menu-content-carousel-card hr {
   width: 130%;
   position: relative;
@@ -751,10 +606,21 @@ main .skill .skill-menu-content-carousel-card-desc {
   padding: 20px 0;
   flex-grow: 1;
 }
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-carousel-card-desc {
+    padding: 10px 0;
+  }
+}
 main .skill .skill-menu-content-carousel-card-desc ul li {
   padding: 5px 0;
   list-style: inside;
   text-align: start;
+}
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-carousel-card-desc ul li {
+    font-size: 0.7rem;
+    padding: 0 0 5px 0;
+  }
 }
 main .skill .skill-menu-content-carousel-card-img {
   height: 47%;
@@ -771,7 +637,7 @@ main .skill .skill-menu-content-carousel-card-img p:hover {
 }
 main .skill .skill-menu-content-carousel-card-img img {
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
   box-shadow: 0px 0px 15px -4px #ffffff;
 }
 main .skill .skill-menu-content-nav ul {
@@ -790,6 +656,13 @@ main .skill .skill-menu-content-nav ul i {
   color: rgba(96, 218, 255, 0.3098039216);
   border-radius: 100%;
   text-align: center;
+}
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-nav ul i {
+    height: 19px;
+    padding: 5px 0 0px 0;
+    width: 20px;
+  }
 }
 main .skill .skill-menu-content-nav ul li {
   align-items: center;

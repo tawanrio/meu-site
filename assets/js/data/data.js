@@ -88,23 +88,23 @@ back: [
             span: `PHP`
          }
    },
-   {
-      title: "Todo List",
-      descLi: [
-         `Interface para gravação de lista de tarefa.`,
-         `* Realizado através do curso de Javascript/NodeJs do Daniel Tapias`,
-         `Interface responsiva para acesso mobile`,
-         `Interações com o banco de dados: criar, ler, atualizar, deletar`,
-      ],
-      imgLink:{
-         img: `assets/img/portfolio/image-not-found.jpg`,
-         url: `#`
-      },
-      skill: 
-         {
-            class: `fa-brands fa-node`,
-            span: `NodeJs`
-         }
-   }
+   // {
+   //    title: "Todo List",
+   //    descLi: [
+   //       `Interface para gravação de lista de tarefa.`,
+   //       `* Realizado através do curso de Javascript/NodeJs do Daniel Tapias`,
+   //       `Interface responsiva para acesso mobile`,
+   //       `Interações com o banco de dados: criar, ler, atualizar, deletar`,
+   //    ],
+   //    imgLink:{
+   //       img: `assets/img/portfolio/image-not-found.jpg`,
+   //       url: `#`
+   //    },
+   //    skill: 
+   //       {
+   //          class: `fa-brands fa-node`,
+   //          span: `NodeJs`
+   //       }
+   // }
 ]
 }

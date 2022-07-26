@@ -48,20 +48,18 @@ main .skill .skill-menu
         color: white
         padding: 5px 20px
         display: flex
-        height: 450px
         flex-direction: column
         border-radius: 10px
         width: 50%
-        min-height: 400px
+        min-height: 450px
         background-color: #0000002c
-        // background-image: url('../img/backgrounds/bg-quadrados.png')
-        // background-size: 80%
         
         transition: transform .5s ease
         transition: .8s
 
         @include base-mixins.mobile
             width: 80%
+            min-height: 200px
             // margin-top: 20%
         
         &:hover
@@ -74,6 +72,8 @@ main .skill .skill-menu
         &-title
           @include layouts-mixins.title-h4
           font-size: 2em
+          @include base-mixins.mobile
+            font-size: 1.2rem
           
         hr
             @include layouts-mixins.hr
@@ -84,12 +84,17 @@ main .skill .skill-menu
         &-desc
           padding: 20px 0
           flex-grow: 1
+          @include base-mixins.mobile
+            padding: 10px 0 
           
           ul 
               li
                 padding: 5px 0
                 list-style: inside
                 text-align: start
+                @include base-mixins.mobile
+                  font-size: .7rem
+                  padding: 0 0 5px 0
 
         &-img
           height: 47%
@@ -105,7 +110,7 @@ main .skill .skill-menu
               color: variables.$text-hover
           img
             margin: 0 auto
-            width: 50%
+            width: 70%
             box-shadow: 0px 0px 15px -4px #ffffff
 
     &-nav
@@ -125,6 +130,10 @@ main .skill .skill-menu
             color: #60daff4f
             border-radius: 100%
             text-align: center
+            @include base-mixins.mobile
+              height: 19px
+              padding: 5px 0 0px 0
+              width: 20px
             
           li
             align-items: center

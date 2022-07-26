@@ -10,21 +10,21 @@ main .skill
     @include layouts-mixins.title-h2
 
     @include base-mixins.mobile
-      margin-bottom: 0%
-      margin-top: 15%
+      // margin-bottom: 0%
+      margin-top: 10%
     
   &-card
     padding: 20px 0
     margin: 50px 0
     display: flex
-    // margin: 0 2%
     flex-wrap: wrap
 
     @include base-mixins.mobile
+      margin: 0
+      padding: 0
       display: grid
-      // height: 45%
       grid-template-columns: 1fr
-      grid-template-rows: 40% 1fr 10%
+      grid-template-rows: 1fr 1fr 10%
       grid-template-areas: "content" "img" "skill"
 
     &-img
@@ -43,7 +43,7 @@ main .skill
       img
         width: 40vw
         @include base-mixins.mobile
-          width: 55vw
+          width: 65vw
   
     &-content
       font-size: 1.1rem
@@ -71,10 +71,7 @@ main .skill
           
         
     &-skill
-      // text-align: start
-      // width: 30%
       margin: auto
-      // font-size: rem
       
       @include base-mixins.mobile
         grid-area: skill
@@ -94,7 +91,6 @@ main .skill
           padding: 4px 0
           height: 25px
           color: #177ad6
-          // margin: 0 -2px 0 0
           border-radius: 100%
           text-align: center
         li
