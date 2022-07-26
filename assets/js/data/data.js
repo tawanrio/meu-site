@@ -1,53 +1,110 @@
-export const dataCarousel = {
-   back: [
+export const dadosCarousel ={
+front: [
+   {
+      title: "Missão Impossível",
+      descLi: [
+         `Jogo de obstaculos com Objetivo chegar ao final da fase sem colidir.`,
+         `Possui logica de colisão com obstaculos e barreiras.`,
+         
+      ],
+      imgLink:{
+         img: `assets/img/portfolio/jogo-impossivel.png`,
+         url: `http://tawanrio.com/jogo-impossivel/`
+      },
+      skill: 
+         {
+            class: `fa-brands fa-js-square`,
+            span: `Javascript`
+         }
+   },
+   {
+      title: "Site papelaria",
+      descLi: [
+         `Site construido através do Wordpress.`,
+         `Possui catalogo, grid e carrossel`,
+      ],
+      imgLink:{
+         img: `assets/img/portfolio/site-agda.png`,
+         url: `#`
+      },
+      skill: 
+         {
+            class: `fa-brands fa-wordpress-simple`,
+            span: `Wordpress`
+         }
+   },
+   {
+      title: "Electrum",
+      descLi: [
+         `Site desenvolvido com HTML e SASS/SCSS.`,
+         `* Realizado através do curso de SASS/SCSS do Matheus Battisti`,
+         `Interface responsiva para acesso mobile`,
+         
+      ],
+      imgLink:{
+         img: `assets/img/portfolio/electrum.jpg`,
+         url: `https://tawanrio.github.io/electrum-sass/`
+      },
+      skill: 
+         {
+            class: `fa-brands fa-sass`,
+            span: `SASS/SCSS`
+         }
+   }
+],
+back: [
    {
       title: "Auto-Atendimento",
-      descLi: `<li>Interface intuitiva para auto-atendimento em uma loja de tintas.</li>
-      <li>Interface responsiva para acesso mobile</li>
-      <li>Interações com o banco de dados: criar, ler, atualizar, deletar e pesquisar - com filtro -</li>`,
-      imgLinks: `<a href="http://tawanrio.com/tintas-estancia/" target="_blank"><img src="assets/img/portfolio/auto-atendimento.png" alt=""></a>
-      <a href="http://tawanrio.com/tintas-estancia/" target="_blank"><p>Acessar</p></a>`,
-      skill: [`MYSQL/NOSQL`,`<i class="fa-solid fa-database"></i><span>MYSQL/NOSQL</span>`]
+      descLi: [
+         `Interface intuitiva para auto-atendimento em uma loja de tintas.`,
+         `Interface responsiva para acesso mobile`,
+         `Interações com o banco de dados: criar, ler, atualizar, deletar e pesquisar - com filtro`,
+      ],
+      imgLink:{
+         img: `assets/img/portfolio/auto-atendimento.png`,
+         url: `http://tawanrio.com/tintas-estancia/`
+      },
+      skill: 
+         {
+            class: `fa-solid fa-database`,
+            span: `MYSQL`
+         }
    },
    {
       title: "In n' Out",
-      descLi: `<li>Aplicativo de bater ponto</li>
-               <li>* Realizado atravéz do curso de PHP da cod3r</li>
-               <li>Cadastro de funcionários</li>
-               <li>Registro de ponto com informações de: entrada, intervalo, saida</li>`,
-      imgLinks: `<a href='#skill' ><img src='assets/img/portfolio/innout.png' alt=''></a>
-      <a href='#skill' ><p>Acessar</p></a>`,
-      skill: [`PHP`,`<i class="fa-brands fa-php"></i><span>PHP</span>`]
+      descLi: [
+         `Aplicativo de bater ponto.`,
+         `* Realizado através do curso de PHP da cod3r`,
+         `Cadastro de funcionários`,
+         `Registro de ponto com informações de: entrada, intervalo, saida`,
+      ],
+      imgLink:{
+         img: `assets/img/portfolio/innout.png`,
+         url: `#`
+      },
+      skill: 
+         {
+            class: `fa-brands fa-php`,
+            span: `PHP`
+         }
    },
    {
       title: "Todo List",
-      descLi: `<li>Interface para gravação de lista de tarefa.</li>
-      <li>Interface responsiva para acesso mobile</li>
-      <li>Interações com o banco de dados: criar, ler, atualizar, deletar</li>`,
-      imgLinks: `<a href="#"><img src="assets/img/portfolio/site-agda.png" alt=""></a>
-      <a href="#"><p>Acessar</p></a>`,
-      skill: ['NodeJs',`<i class="fa-brands fa-node"></i><span>NodeJs</span>`]
+      descLi: [
+         `Interface para gravação de lista de tarefa.`,
+         `* Realizado através do curso de Javascript/NodeJs do Daniel Tapias`,
+         `Interface responsiva para acesso mobile`,
+         `Interações com o banco de dados: criar, ler, atualizar, deletar`,
+      ],
+      imgLink:{
+         img: `assets/img/portfolio/image-not-found.jpg`,
+         url: `#`
+      },
+      skill: 
+         {
+            class: `fa-brands fa-node`,
+            span: `NodeJs`
+         }
    }
-   ],
-
-front: [
-   {
-      title: `Missão Impossível`,
-      descLi: `<li>Jogo de obstaculos com Objetivo chegar ao final da fase sem colidir.</li>
-      <li>Possui logica de colisão com obstaculos e barreiras</li>`,
-      imgLinks: `<a href="http://tawanrio.com/jogo-impossivel/" target="_blank"><img src="assets/img/portfolio/jogo-impossivel.png" alt=""></a>
-      <a href="http://tawanrio.com/jogo-impossivel/" target="_blank"><p>Acessar</p></a>`,
-      skill: [`Javascript`,`<i class="fa-brands fa-js-square"></i>
-      <span>Javascript</span>`]
-   },
-   {
-      title: `Site papelaria`,
-      descLi: `<li>Site</li>`,
-      imgLinks: `<a href="#" target="_blank"><img src="assets/img/portfolio/site-agda.png" alt=""></a>
-      <p><a href="#portfolio" >Indisponível</a></p>`,
-      skill: [`Wordpress`,`<i class="fa-brands fa-wordpress-simple"></i>
-      <span>Wordpress</span>`]
-   },
-   
 ]
 }

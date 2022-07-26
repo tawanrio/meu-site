@@ -776,20 +776,26 @@ main .skill .skill-menu-content-carousel-card-img img {
 }
 main .skill .skill-menu-content-nav ul {
   padding: 0px 10px;
+  width: 55%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 main .skill .skill-menu-content-nav ul i {
   width: 25px;
   height: 22px;
   padding: 4px 0;
+  margin: 0 3px 4px 0;
   color: rgba(96, 218, 255, 0.3098039216);
   border-radius: 100%;
   text-align: center;
 }
 main .skill .skill-menu-content-nav ul li {
+  align-items: center;
+  flex-direction: column;
   cursor: pointer;
+  display: flex;
   color: rgba(96, 218, 255, 0.3098039216);
   margin: 0 10px;
 }

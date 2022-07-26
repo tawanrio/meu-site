@@ -1,4 +1,4 @@
-class AppService{
+export class AppService{
    constructor(){
       
    }

@@ -111,22 +111,27 @@ main .skill .skill-menu
     &-nav
       ul
           padding: 0px 10px
+          width: 55%
+          margin: 0 auto
           display: flex
           flex-wrap: wrap
-          justify-content: center
-
-          @include base-mixins.mobile
+          justify-content: space-evenly
 
           i
             width: 25px
             height: 22px
             padding: 4px 0
+            margin: 0 3px 4px 0 
             color: #60daff4f
             border-radius: 100%
             text-align: center
             
           li
+            align-items: center
+            flex-direction: column
+            
             cursor: pointer
+            display: flex
             color: #60daff4f
             margin: 0 10px
             @include base-mixins.mobile
