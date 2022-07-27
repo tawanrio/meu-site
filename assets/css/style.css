@@ -29,7 +29,10 @@ html body {
   scrollbar-color: blue transparent;
 }
 html body::-webkit-scrollbar {
-  width: 3px;
+  width: 4px;
+  height: 3px;
+}
+html body::-webkit-scrollbar:hover {
   height: 3px;
 }
 html body::-webkit-scrollbar-thumb {
@@ -190,6 +193,7 @@ body {
   display: grid;
   background-image: linear-gradient(to top, #f1f1f1, #effcfd, #f1f1f1);
   margin: 0 auto;
+  max-width: 1600px;
 }
 
 header {
@@ -273,13 +277,15 @@ header nav.nav {
   justify-content: center;
   position: absolute;
   top: 50px;
-  right: 14vw;
+  left: 50%;
   width: 70%;
   height: 45px;
+  max-width: 1300px;
   color: #283618;
   background-image: linear-gradient(to right, #f1f1f1, #f5f3f1, rgba(241, 241, 241, 0));
   border-radius: 30px 0px 0px 30px;
   box-shadow: -10px 10px 15px -10px rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%) translateZ(0) !important;
 }
 @media (max-width: 1080px) {
   header nav.nav {
@@ -399,7 +405,7 @@ main .skill-card-img span {
   top: -3.5vh;
 }
 main .skill-card-img img {
-  width: 40vw;
+  width: 40%;
 }
 @media (max-width: 625px) {
   main .skill-card-img img {
@@ -675,7 +681,7 @@ main .skill .skill-menu-content-carousel-container-card-img p:hover {
 }
 main .skill .skill-menu-content-carousel-container-card-img img {
   margin: 0 auto;
-  width: 45vh;
+  width: 45%;
   box-shadow: 0px 0px 15px -4px #ffffff;
 }
 main .skill .skill-menu-content-nav ul {

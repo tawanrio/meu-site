@@ -8,13 +8,16 @@ header nav.nav
    justify-content: center
    position: absolute
    top: 50px
-   right: 14vw
+   // right: 14vw
+   left: 50%
    width: 70%
    height: 45px
+   max-width: 1300px
    color: variables.$text-color-dark
    background-image: linear-gradient(to right, #f1f1f1, #f5f3f1, #f1f1f100 )
    border-radius: 30px 0px 0px 30px  
    box-shadow: -10px 10px 15px -10px rgba(0,0,0,0.3)
+   transform: translateX(-50%) translateZ(0) !important
 
    @include base-mixins.wid1080
       top: 45px
