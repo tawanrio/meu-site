@@ -12,6 +12,7 @@ import {AppController} from './controller/App-controller.js'
    
 initEvents()
 
+
 function initEvents(){
    // Enviar  Whats
 document.querySelector('form#whats').addEventListener('submit', function(e){
@@ -41,6 +42,7 @@ document.querySelectorAll('.carousel-arrow').forEach(arrow => {
    })
 })
 }
+
 
 })()
 

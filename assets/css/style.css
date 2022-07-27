@@ -529,7 +529,8 @@ main .skill .skill-menu-content-title i {
   margin-right: 10px;
 }
 main .skill .skill-menu-content-carousel {
-  padding: 15px 0 10px 0;
+  padding: 0px 0 10px 0;
+  min-height: 450px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -555,32 +556,64 @@ main .skill .skill-menu-content-carousel .carousel-arrow:hover {
   transition: 0.5s;
   color: #28db91;
 }
-main .skill .skill-menu-content-carousel-card {
+main .skill .skill-menu-content-carousel #card.card-hidden {
+  visibility: hidden;
+}
+main .skill .skill-menu-content-carousel #card.card-fade {
+  position: absolute;
+  transition: 1s;
+}
+main .skill .skill-menu-content-carousel #card.card-right {
+  transform: translateX(50%) rotateY(90deg);
+  transition: 0.3s;
+  position: absolute;
+}
+main .skill .skill-menu-content-carousel #card.card-left {
+  transform: translateX(-50%) rotateY(-90deg);
+  transition: 0.3s;
+  position: absolute;
+}
+main .skill .skill-menu-content-carousel #card.hidden-right {
+  transform: translateX(-50%) rotateY(-90deg);
+  transition: 0.3s;
+}
+main .skill .skill-menu-content-carousel #card.hidden-left {
+  transform: translateX(50%) rotateY(90deg);
+  transition: 0.3s;
+}
+main .skill .skill-menu-content-carousel #card.visible {
+  transform: translateX(0%) rotateY(0deg);
+  transition: 0.3s;
+}
+main .skill .skill-menu-content-carousel-container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+main .skill .skill-menu-content-carousel-container-card {
   box-shadow: 0px 0px 10px -1px rgba(107, 124, 199, 0.4509803922);
   border: solid white 2px;
   color: white;
-  padding: 5px 20px;
+  padding: 5px 50px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  width: 50%;
+  width: 620px;
   min-height: 450px;
   background-color: rgba(0, 0, 0, 0.1725490196);
-  transition: transform 0.5s ease;
-  transition: 0.8s;
 }
 @media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel-card {
+  main .skill .skill-menu-content-carousel-container-card {
     width: 100%;
     min-height: 200px;
   }
 }
-main .skill .skill-menu-content-carousel-card:hover {
+main .skill .skill-menu-content-carousel-container-card:hover {
   transform: scale(1.003);
   transition: 0.5s;
   box-shadow: 0px 0px 15px 1px rgba(107, 124, 199, 0.4509803922);
 }
-main .skill .skill-menu-content-carousel-card-title {
+main .skill .skill-menu-content-carousel-container-card-title {
   font-weight: 500;
   font-family: "Cormorant SC", serif;
   font-size: 1.8rem;
@@ -588,16 +621,16 @@ main .skill .skill-menu-content-carousel-card-title {
   font-size: 2em;
 }
 @media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel-card-title {
+  main .skill .skill-menu-content-carousel-container-card-title {
     font-size: 2.3rem;
   }
 }
 @media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel-card-title {
+  main .skill .skill-menu-content-carousel-container-card-title {
     font-size: 1.4rem;
   }
 }
-main .skill .skill-menu-content-carousel-card hr {
+main .skill .skill-menu-content-carousel-container-card hr {
   width: 130%;
   position: relative;
   top: -5%;
@@ -608,42 +641,41 @@ main .skill .skill-menu-content-carousel-card hr {
   width: 100%;
   top: 0;
 }
-main .skill .skill-menu-content-carousel-card-desc {
+main .skill .skill-menu-content-carousel-container-card-desc {
   padding: 20px 0;
   flex-grow: 1;
 }
 @media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel-card-desc {
+  main .skill .skill-menu-content-carousel-container-card-desc {
     padding: 10px 0;
   }
 }
-main .skill .skill-menu-content-carousel-card-desc ul li {
+main .skill .skill-menu-content-carousel-container-card-desc ul li {
   padding: 5px 0;
   list-style: inside;
   text-align: start;
 }
 @media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel-card-desc ul li {
+  main .skill .skill-menu-content-carousel-container-card-desc ul li {
     font-size: 0.8rem;
     padding: 0 0 5px 0;
   }
 }
-main .skill .skill-menu-content-carousel-card-img {
-  height: 47%;
+main .skill .skill-menu-content-carousel-container-card-img {
   padding-bottom: 10px;
 }
-main .skill .skill-menu-content-carousel-card-img p {
+main .skill .skill-menu-content-carousel-container-card-img p {
   text-indent: 0;
   color: rgba(255, 255, 255, 0.3764705882);
   padding: 5px 0;
   font-size: 0.8em;
 }
-main .skill .skill-menu-content-carousel-card-img p:hover {
+main .skill .skill-menu-content-carousel-container-card-img p:hover {
   color: #28db91;
 }
-main .skill .skill-menu-content-carousel-card-img img {
+main .skill .skill-menu-content-carousel-container-card-img img {
   margin: 0 auto;
-  width: 70%;
+  width: 45vh;
   box-shadow: 0px 0px 15px -4px #ffffff;
 }
 main .skill .skill-menu-content-nav ul {

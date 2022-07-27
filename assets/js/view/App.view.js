@@ -3,35 +3,19 @@ export class AppView{
    }
    
    renderCarousel(elementosCard){
-      const carouselCard = elementosCard.carousel.querySelector('.skill-menu-content-carousel-card')
-      carouselCard.style.cssText = `
-      transition: .2s;
-      opacity: 0;
-      `
-      
-      setTimeout(() => {
+
+      const carouselCard = elementosCard.carousel.querySelector('.skill-menu-content-carousel-container-card')
+      const containerCard = carouselCard.parentElement
       const ul = elementosCard.carousel.querySelector('.carousel-nav')
 
       
-      // CRIA O CARD
-      elementosCard.carousel.querySelector('.carousel-title').innerHTML = elementosCard.titleCard
-
-      elementosCard.carousel.querySelector('.carousel-ul').innerHTML = ''
-      elementosCard.descUl.forEach(li => {
-         elementosCard.carousel.querySelector('.carousel-ul').append(li)
-      })
-
-      elementosCard.carousel.querySelector('.content-title').innerHTML = ''
-      elementosCard.carousel.querySelector('.content-title').append(...elementosCard.divTitle)
-
-      elementosCard.carousel.querySelector('.carousel-img').innerHTML =''
-      elementosCard.carousel.querySelector('.carousel-img').append(elementosCard.link)
+      // INSERE O CARD
+      containerCard.append(elementosCard.card)
       
       // CRIA O MENU
       ul.innerHTML = ''
       ul.append(...elementosCard.menuCarousel)
       
-
       // ATIVA O LINK
       ul.querySelectorAll('li').forEach(lis => {
          if(lis.classList.contains('active')){
@@ -43,10 +27,22 @@ export class AppView{
          }
       })
       
-         carouselCard.style.cssText = `
-         opacity: 1;
-         `
-      }, 150);
+      setTimeout(function(){
+         const side = elementosCard.side || 'right'
+         const cardFade = elementosCard.carousel.querySelector('.card-fade')
+         const cardLeft = elementosCard.carousel.querySelector(`.card-${side}`) 
+   
+         if(cardLeft != null) {
+            cardFade.classList.toggle(`hidden-${side}`)
+            cardLeft.classList.toggle('visible')
+            
+            setTimeout(function(){
+               cardFade.parentNode.removeChild(cardFade)
+               cardLeft.className = 'skill-menu-content-carousel-container-card card-fade'
+               
+            },300)
+         }
+      },5)
    }
    
    

@@ -11,6 +11,8 @@ export class AppController{
 
    arrowCarousel(arrow, service){
       const elementosCard = service.alterCard(arrow)
+
+      
       
       this.renderCarousel(elementosCard)
    }

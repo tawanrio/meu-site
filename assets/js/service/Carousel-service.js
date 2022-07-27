@@ -3,8 +3,8 @@ export class Carousel{
       this.dataCarousel = elementos
       this.controller = controller
       this.timerInterval
-      this.initCarousel = 0
-      this.timerSetCard = 10000
+      this.initCarousel = 1
+      this.timerSetCard = 15000
 
       this.createCarousel()
       this.changeOrderBySetInterval()
@@ -24,7 +24,47 @@ export class Carousel{
       })
    }
 
-   createElements(dataCarousel, orderId, carousel){
+   createCard(){
+      const elementosCard = {...arguments[0]}
+      let lado = elementosCard.side || 'right'
+
+      const card = document.createElement('div')
+      const title = document.createElement('h3')
+      const hr = document.createElement('hr')
+      const desc = document.createElement('div')
+      const ul = document.createElement('ul')
+      const img = document.createElement('div')
+
+      card.id = 'card'
+      card.className = `skill-menu-content-carousel-container-card card-${lado}`
+
+      title.className = 'skill-menu-content-carousel-container-card-title carousel-title'
+      title.innerHTML = elementosCard.titleCard 
+      
+      desc.className = 'skill-menu-content-carousel-container-card-desc'
+      
+      ul.className = 'carousel-ul'
+
+      elementosCard.descUl.forEach(li => {
+         ul.append(li)
+      })
+      
+      
+      img.className = 'skill-menu-content-carousel-container-card-img carousel-img'
+      img.append(elementosCard.link)
+
+
+      card.append(title)
+      card.append(hr)
+      desc.append(ul)
+      card.append(desc)
+      card.append(img)
+
+      return card 
+      
+   }
+
+   createElements(dataCarousel, orderId, carousel, side){
 
       const dados = dataCarousel[orderId]
 
@@ -35,12 +75,14 @@ export class Carousel{
          const {icon, span} = this.createTitleElement(e.skill)
          li.setAttribute('orderId', menuCarousel.length)
          li.addEventListener('click', () => {
-            
+            if(li.classList[0] !== undefined) return
             const carousel = this.getCarouselElement(li)
             const {card} = this.checkCard(carousel);
             const orderId = li.getAttribute('orderid')
             
             const elementosCard = this.createElements(this.dataCarousel[card], orderId, carousel);
+
+
             this.controller.renderCarousel(elementosCard)
          })
          li.append(icon,span)
@@ -87,9 +129,9 @@ export class Carousel{
       const {icon, span} = this.createTitleElement(dados.skill)
       divTitle.push(icon, span)
 
-      
-      return { descUl, divTitle, link, titleCard, menuCarousel, carousel }
+      const card = this.createCard({ descUl, divTitle, link, titleCard, menuCarousel, carousel, side })
 
+      return { descUl, divTitle, link, titleCard, menuCarousel, carousel, card , side}
    }
    
    getCarouselElement(reference){
@@ -140,6 +182,7 @@ export class Carousel{
       let dataCarousel = this.dataCarousel[card].length-1
       let orderId = parseInt(carousel.querySelector('.active').getAttribute('orderid'))
 
+
       clearInterval(this.timerInterval)
 
       switch(side){
@@ -161,14 +204,24 @@ export class Carousel{
             }
          
          this.changeOrderBySetInterval()    
-       return this.createElements(this.dataCarousel[card], orderId, carousel)
+       return this.createElements(this.dataCarousel[card], orderId, carousel, side)
+   }
+   disableEnableArrow(arrow){
+      let desableArrow = document.createElement('button')
+      desableArrow.style.cssText = `   position: absolute; top: -7px;  left: -7px;   width:  60px;   height: 60px; opacity: 0;   `
+      desableArrow.disabled=true
+      arrow.append(desableArrow)
+
+      setTimeout(()=>{
+         arrow.removeChild(desableArrow)
+      },250)
    }
 
    alterCard(arrow){
       const {side, card} = this.checkCard(arrow);
-      
       const carousel = this.getCarouselElement(arrow)
-     
+      this.disableEnableArrow(arrow)
+      
      return this.changeOrderByArrow(side, card, carousel)
    }
 }

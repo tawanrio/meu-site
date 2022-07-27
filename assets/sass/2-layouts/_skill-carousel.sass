@@ -26,7 +26,8 @@ main .skill .skill-menu
         color: white
         margin-right: 10px
     &-carousel
-      padding: 15px 0 10px 0
+      padding: 0px 0 10px 0
+      min-height: 450px
       @include layouts-mixins.center-content
 
       .carousel-arrow
@@ -45,77 +46,129 @@ main .skill .skill-menu
           transform: scale(1.2)
           transition: .5s
           color: variables.$text-hover
+     
 
-      &-card
-        box-shadow: 0px 0px 10px -1px #6b7cc773
-        border: solid white 2px
-        color: white
-        padding: 5px 20px
+      #card.card-hidden
+        visibility: hidden
+
+      #card.card-fade
+        position: absolute
+        transition: 1s
+        
+      #card.card-right
+        transform: translateX(50%) rotateY(90deg)
+        transition: .3s
+        position: absolute
+
+      #card.card-left
+        transform: translateX(-50%) rotateY(-90deg)
+        transition: .3s
+        position: absolute
+
+      #card.hidden-right
+        transform: translateX(-50%) rotateY(-90deg) 
+        transition: .3s
+
+      #card.hidden-left
+        transform: translateX(50%) rotateY(90deg) 
+        transition: .3s
+
+      #card.visible
+        transform: translateX(0%) rotateY(0deg)
+        transition: .3s
+
+
+
+      &-container
         display: flex
-        flex-direction: column
-        border-radius: 10px
-        width: 50%
-        min-height: 450px
-        background-color: #0000002c
-        
-        transition: transform .5s ease
-        transition: .8s
+        justify-content: center
+        width: 60%
+        // min-width: 750px
 
-        @include base-mixins.mobile
-            width: 100%
-            min-height: 200px
-            // margin-top: 20%
-        
-        &:hover
-            // margin-top: -4px 
-            transform: scale(1.003)
-            transition: .5s
-            box-shadow: 0px 0px 15px 1px #6b7cc773
-        
-       
-        &-title
-          @include layouts-mixins.title-h4
-          font-size: 2em
-          @include base-mixins.mobile
-            font-size: 1.4rem
+        // &-card
+        //   box-shadow: 0px 0px 10px -1px #6b7cc773
+        //   border: solid white 2px
+        //   color: white
+        //   padding: 5px 20px
+        //   display: flex
+        //   flex-direction: column
+        //   border-radius: 10px
+        //   width: 100%
+        //   min-height: 450px
+        //   background-color: #0000002c
+
+        &-card
+          box-shadow: 0px 0px 10px -1px #6b7cc773
+          border: solid white 2px
+          color: white
+          padding: 5px 50px
+          display: flex
+          flex-direction: column
+          border-radius: 10px
+          width: 620px
+          min-height: 450px
+          background-color: #0000002c
           
-        hr
-            @include layouts-mixins.hr
-            width: 100%
-            top: 0
+          // transition: transform .5s ease
+          // transition: .8s
 
+        
 
-        &-desc
-          padding: 20px 0
-          flex-grow: 1
           @include base-mixins.mobile
-            padding: 10px 0 
+              width: 100%
+              min-height: 200px
+              // margin-top: 20%
           
-          ul 
-              li
-                padding: 5px 0
-                list-style: inside
-                text-align: start
-                @include base-mixins.mobile
-                  font-size: .8rem
-                  padding: 0 0 5px 0
+          &:hover
+              // margin-top: -4px 
+              transform: scale(1.003)
+              transition: .5s
+              box-shadow: 0px 0px 15px 1px #6b7cc773
+          
+        
+          &-title
+            @include layouts-mixins.title-h4
+            font-size: 2em
+            @include base-mixins.mobile
+              font-size: 1.4rem
+            
+          hr
+              @include layouts-mixins.hr
+              width: 100%
+              top: 0
 
-        &-img
-          height: 47%
-          padding-bottom: 10px
 
-          p 
-            text-indent: 0
-            color: #ffffff60
-            padding: 5px 0
-            font-size: .8em
+          &-desc
+            padding: 20px 0
+            flex-grow: 1
+            @include base-mixins.mobile
+              padding: 10px 0 
+            
+            ul 
+                li
+                  padding: 5px 0
+                  list-style: inside
+                  text-align: start
+                  @include base-mixins.mobile
+                    font-size: .8rem
+                    padding: 0 0 5px 0
 
-            &:hover
-              color: variables.$text-hover
-          img
-            margin: 0 auto
-            width: 70%
-            box-shadow: 0px 0px 15px -4px #ffffff
+          &-img
+            // height: 47%
+            padding-bottom: 10px
+
+            p 
+              text-indent: 0
+              color: #ffffff60
+              padding: 5px 0
+              font-size: .8em
+
+              &:hover
+                color: variables.$text-hover
+            img
+              margin: 0 auto
+              width: 45vh
+              box-shadow: 0px 0px 15px -4px #ffffff
 
     &-nav
       ul

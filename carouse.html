@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <style>
+      body{
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: center;
+         
+      }
+      .card{
+         margin: 10px;
+         padding: 20px;
+         height: 250px;
+         text-align: center;
+         border: solid black 2px
+      }
+      li{
+         padding: 5px;
+         list-style: none;
+      }
+      .img{
+         border: solid black 2px;
+         height: 70px;
+      }
+
+
+      .card.card-hidden{
+         visibility: hidden;
+      }
+
+      .card.card-1{
+         position: absolute;
+         transition: 1s;
+      }
+        
+      .card.card-left{
+         transform: translateX(50%) rotateY(90deg);
+         transition: .2s;
+         position: absolute;
+      }
+      .card.hidden-left{
+         transform: translateX(-50%) rotateY(-90deg) ;
+         transition: .2s;
+      }
+      
+      
+      
+      
+      .card.card-right{
+         transform: translateX(-50%) rotateY(-90deg);
+         transition: .2s;
+         position: absolute;
+      }
+      .card.hidden-right{
+         transform: translateX(50%) rotateY(90deg) ;
+         transition: .2s;
+      }
+
+
+      .card.visible{
+      }
+      
+
+   </style>
+</head>
+<body>
+   <div>
+
+      <button id="left">left <  </button>
+      <button id="trocar">Trocar</button>
+      <button id="right">> right</button>
+   </div>
+
+   <div class="content">
+       <div class="card card-1">
+         <div class="title">
+            <h1>sou um titulo</h1>
+         </div>
+         <div class="desc">
+            <ul>
+               <li>aqui é um teste apenas um teste</li>
+               <li>aqui é um teste apenas um teste</li>
+               <li>aqui é um teste apenas um teste</li>
+            </ul>
+         </div>
+         <div class="img">sou uma imagem</div>
+      </div>
+
+   </div>
+      
+
+
+
+
+   <script>
+      function createCard(_lado){
+
+         let lado = _lado || 'left'
+
+         const card = document.createElement('div')
+         const title = document.createElement('h3')
+         const hr = document.createElement('hr')
+         const desc = document.createElement('div')
+         const ul = document.createElement('ul')
+         const img = document.createElement('div')
+
+         card.className = `skill-menu-content-carousel-card card-${lado}`
+
+         title.className = 'skill-menu-content-carousel-card-title carousel-title'
+         
+         desc.className = 'kill-menu-content-carousel-card-desc'
+         
+         ul.className = 'kcarousel-ul'
+         
+         img.className = 'skill-menu-content-carousel-card-img carousel-img'
+         
+         card.append(title)
+         card.append(hr)
+         desc.append(ul)
+         card.append(desc)
+         card.append(img)
+
+         return card 
+      }
+
+      document.querySelector('button#right').addEventListener('click',function(){
+         
+         const content = document.querySelector('.content')
+
+         const cardElement = createCard()
+     
+         content.append(cardElement)
+
+         setTimeout(function(){
+
+            const card1 = document.querySelector('.card.card-1')
+            const card2 = document.querySelector('.card.card-left')
+            card1.classList.toggle('hidden-left')
+            card2.classList.toggle('visible')
+
+            setTimeout(function(){
+               card1.parentNode.removeChild(card1)
+               card2.className = 'card card-1'
+
+            },450)
+         },5)
+})
+
+document.querySelector('button#left').addEventListener('click',function(){
+   const content = document.querySelector('.content')
+
+   const cardElement = createCard('right')
+
+   content.append(cardElement)
+
+   setTimeout(function(){
+
+      const card1 = document.querySelector('.card.card-1')
+      const card2 = document.querySelector('.card.card-right')
+
+      card1.classList.toggle('hidden-right')
+      card2.classList.toggle('visible')
+
+      setTimeout(function(){
+         card1.parentNode.removeChild(card1)
+         card2.className = 'card card-1'
+
+      },450)
+   },5)
+})
+
+
+   </script>
+   </body>
+   </html>
