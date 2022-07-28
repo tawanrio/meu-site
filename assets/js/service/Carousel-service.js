@@ -146,6 +146,11 @@ export class Carousel{
          iconExpand.classList.toggle('fa-compress')
          iconExpand.classList.toggle('fa-expand')
 
+         if(iconExpand.classList.contains('active')){
+            clearInterval(this.timerInterval)
+         }else{
+            this.changeOrderBySetInterval() 
+         }
 
       })
 

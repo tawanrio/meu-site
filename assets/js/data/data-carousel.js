@@ -42,7 +42,7 @@ front: [
          
       ],
       imgLink:{
-         img: `assets/img/portfolio/electrum.jpg`,
+         img: `assets/img/portfolio/electrum01.gif`,
          url: `https://tawanrio.github.io/electrum-sass/`
       },
       skill: 
@@ -79,7 +79,7 @@ back: [
          `Registro de ponto com informações de: entrada, intervalo, saida`,
       ],
       imgLink:{
-         img: `assets/img/portfolio/innout.png`,
+         img: `assets/img/portfolio/innout.gif`,
          url: `#`
       },
       skill: 
