@@ -14,10 +14,10 @@ header nav.nav
    height: 45px
    max-width: 1300px
    color: variables.$text-color-dark
-   background-image: linear-gradient(to right, #f1f1f1, #f5f3f1, #f1f1f100 )
+   background-image: linear-gradient(to right, #f1f1f1, #f1f1f1, #f5f3f1, #f1f1f100 )
    border-radius: 30px 0px 0px 30px  
    box-shadow: -10px 10px 15px -10px rgba(0,0,0,0.3)
-   transform: translateX(-50%) translateZ(0) !important
+   transform:  translateX(-50%)  !important
 
    @include base-mixins.wid1080
       top: 45px
@@ -26,6 +26,7 @@ header nav.nav
       top: 35px
 
    @include base-mixins.mobile
+      transform: translateX(0%) translateZ(0) !important
       position: static
       width: 100%
       border-radius: 0
@@ -38,7 +39,7 @@ header nav.nav
       @include base-mixins.mobile
          // flex-direction: column
 
-      li#cv
+      a#cv
          border: solid #ee0000 2px
          color: #ff0a0a
          border-radius: 20px
@@ -51,10 +52,9 @@ header nav.nav
             padding: 0
 
          &:hover
-            background-image: linear-gradient(to right, #83ced800, #1576af31, #0999ec00)
+            // background-image: linear-gradient(to right, #83ced800, #1576af31, #0999ec00)
             color: #0917db
             border: solid #0917db 2px
-            transition: .3s 
 
 
       li

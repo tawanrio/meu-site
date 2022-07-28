@@ -18,27 +18,43 @@ main .skill .skill-menu
     background-color: #3a3c42
     font-size: .8rem
     padding: 30px 0 60px 0
+    @include base-mixins.mobile
+      padding: 5px 0 20px 0
+
     &-title
       padding: 5px 0 15px 0
       color: white
       @include layouts-mixins.title-h3
+      @include base-mixins.mobile
+        padding: 5px 0 0 0
+
       i
         color: white
         margin-right: 10px
     &-carousel
       padding: 0px 0 10px 0
-      min-height: 450px
+      min-height: 500px
+      position: relative
       @include layouts-mixins.center-content
 
+      @include base-mixins.wid1280
+        min-height: 435px
+      @include base-mixins.wid1080
+        min-height: 400px
+
+      @include base-mixins.mobile
+        min-height: 300px
+
       .carousel-arrow
-        margin: 0 40px
+        // margin: 0 40px
         font-size: 2.5rem
         transition: transform .5s ease
         cursor: pointer
         color: #6fa2d1f8
         transition: .5s
+
         @include base-mixins.mobile
-          margin: 0 15px
+          // margin: 0 20px
           font-size: 2rem
         
 
@@ -54,16 +70,20 @@ main .skill .skill-menu
       #card.card-fade
         position: absolute
         transition: 1s
+        top: 0
+        // left: 0
         
       #card.card-right
         transform: translateX(50%) rotateY(90deg)
         transition: .3s
         position: absolute
+        top: 0
 
       #card.card-left
         transform: translateX(-50%) rotateY(-90deg)
         transition: .3s
         position: absolute
+        top: 0
 
       #card.hidden-right
         transform: translateX(-50%) rotateY(-90deg) 
@@ -84,18 +104,8 @@ main .skill .skill-menu
         justify-content: center
         width: 60%
         // min-width: 750px
-
-        // &-card
-        //   box-shadow: 0px 0px 10px -1px #6b7cc773
-        //   border: solid white 2px
-        //   color: white
-        //   padding: 5px 20px
-        //   display: flex
-        //   flex-direction: column
-        //   border-radius: 10px
-        //   width: 100%
-        //   min-height: 450px
-        //   background-color: #0000002c
+        @include base-mixins.mobile
+          margin: 0 50px
 
         &-card
           box-shadow: 0px 0px 10px -1px #6b7cc773
@@ -105,22 +115,20 @@ main .skill .skill-menu
           display: flex
           flex-direction: column
           border-radius: 10px
-          width: 620px
-          min-height: 450px
+          width: 50%
+          min-height: 420px
           background-color: #0000002c
           
-          // transition: transform .5s ease
-          // transition: .8s
-
-        
+          @include base-mixins.wid1080
+            min-height: 350px
+            padding: 5px 30px
 
           @include base-mixins.mobile
-              width: 100%
-              min-height: 200px
-              // margin-top: 20%
+            width: 70%
+            min-height: 280px
+
           
           &:hover
-              // margin-top: -4px 
               transform: scale(1.003)
               transition: .5s
               box-shadow: 0px 0px 15px 1px #6b7cc773
@@ -141,6 +149,8 @@ main .skill .skill-menu
           &-desc
             padding: 20px 0
             flex-grow: 1
+            
+            // height: 5v
             @include base-mixins.mobile
               padding: 10px 0 
             
@@ -154,22 +164,42 @@ main .skill .skill-menu
                     padding: 0 0 5px 0
 
           &-img
-            // height: 47%
             padding-bottom: 10px
 
-            p 
+            a , li
               text-indent: 0
-              color: #ffffff60
-              padding: 5px 0
-              font-size: .8em
+              color: #ffffff
+              
+              font-size: 1.2em
 
               &:hover
                 color: variables.$text-hover
             img
               margin: 0 auto
-              width: 45%
+              width: 100%
               box-shadow: 0px 0px 15px -4px #ffffff
+              transition: .5s
 
+            i.fa-solid
+              font-size: 15px
+              color: white
+              background-color: #02020252
+              border-radius: 10%
+              padding: 3px
+              position: absolute
+              bottom: 10%
+              right: 5%
+              width: 22px
+              transition: .4s
+
+              &:hover
+                background-color: #020202cb
+
+            div.active
+              transition: .4s
+              transform: scale(2.5)
+
+                
     &-nav
       ul
           padding: 0px 10px

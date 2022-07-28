@@ -1,4 +1,4 @@
-export const dadosCarousel ={
+export const dataCarousel ={
 front: [
    {
       title: "Missão Impossível",
@@ -8,7 +8,7 @@ front: [
          
       ],
       imgLink:{
-         img: `assets/img/portfolio/jogo-impossivel.png`,
+         img: `assets/img/portfolio/jogo-impossivel.gif`,
          url: `http://tawanrio.com/jogo-impossivel/`
       },
       skill: 
@@ -61,7 +61,7 @@ back: [
          `Interações com o banco de dados: criar, ler, atualizar, deletar e pesquisar - com filtro`,
       ],
       imgLink:{
-         img: `assets/img/portfolio/auto-atendimento.png`,
+         img: `assets/img/portfolio/auto-atendimento.gif`,
          url: `http://tawanrio.com/tintas-estancia/`
       },
       skill: 

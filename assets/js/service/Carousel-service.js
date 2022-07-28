@@ -3,24 +3,29 @@ export class Carousel{
       this.dataCarousel = elementos
       this.controller = controller
       this.timerInterval
-      this.initCarousel = 1
-      this.timerSetCard = 15000
+      this.initCarousel = {front: 0, back: 0}
+      this.timerSecSetCard = 15
+      this.lastChange = {front: new Date(), back: new Date()}
+      this.newChange = {front: null, back: null}
+      
 
       this.createCarousel()
-      this.changeOrderBySetInterval()
    }
 
    createCarousel(){
       const arrCarousel = document.querySelectorAll(".skill-menu-content")
-
       arrCarousel.forEach(carousel => {
          const {card} = this.checkCard(carousel)
 
-         if(this.initCarousel == this.dataCarousel[card].length){
-            this.initCarousel = 0
+         if(this.initCarousel[card] == this.dataCarousel[card].length-1){
+            this.initCarousel[card] = 0
+         }else{
+            this.initCarousel[card] += 1
          }
-         const elementosCard = this.createElements(this.dataCarousel[card], this.initCarousel, carousel)
+         
+         const elementosCard = this.createElements(this.dataCarousel[card], this.initCarousel[card], carousel)
          this.controller.renderCarousel(elementosCard)
+
       })
    }
 
@@ -51,7 +56,11 @@ export class Carousel{
       
       
       img.className = 'skill-menu-content-carousel-container-card-img carousel-img'
-      img.append(elementosCard.link)
+
+      for(let prop in elementosCard.containerImg){
+         img.append(elementosCard.containerImg[prop])
+
+      }
 
 
       card.append(title)
@@ -59,6 +68,7 @@ export class Carousel{
       desc.append(ul)
       card.append(desc)
       card.append(img)
+
 
       return card 
       
@@ -68,6 +78,7 @@ export class Carousel{
 
       const dados = dataCarousel[orderId]
 
+      // console.log(orderId);
       // CRIA O MENU COM EVENTO CLICK
       const menuCarousel = [] // RETORNO ESTA VARIAVEL
       dataCarousel.forEach(e => {
@@ -81,14 +92,12 @@ export class Carousel{
             const orderId = li.getAttribute('orderid')
             
             const elementosCard = this.createElements(this.dataCarousel[card], orderId, carousel);
-
-
+            if(elementosCard === null) return
             this.controller.renderCarousel(elementosCard)
          })
          li.append(icon,span)
          menuCarousel.push(li)
       })
-
 
       // INSERE EM titleCard O TITULO DO CARD
       const titleCard = dados.title // RETORNO ESTA VARIAVEL
@@ -104,23 +113,45 @@ export class Carousel{
       // INSERE EM link A IMAGEM E O PARAGRAFO
       const url = dados.imgLink.url
       const fileImg = dados.imgLink.img
-      const pAcessar = document.createElement('P')
-      const img = document.createElement('IMG')
 
-      let link // RETORNO ESTA VARIAVEL
+      // let linkAcessar = document.createElement('a')
+      let linkAcessar
+      const img = document.createElement('img')
+      const iconExpand = document.createElement('i')
+
+      const divImg = document.createElement('div')
+
+      
+      // let containerImg // RETORNO ESTA VARIAVEL
+
       if(url !== '#'){
-         link = document.createElement('A')
-         link.setAttribute('href', url)
-         link.setAttribute('target', '_blank')
-         pAcessar.innerHTML = 'Acessar'
+         linkAcessar = document.createElement('a')
+         linkAcessar.setAttribute('href', url)
+         linkAcessar.setAttribute('target', '_blank')
+         linkAcessar.innerHTML = 'Acessar'
       }else{
-         link = document.createElement('li')
-         link.style.cssText = 'list-style: none; cursor: pointer'
-         pAcessar.innerHTML = 'Indisponível'
+         linkAcessar = document.createElement('li')
+         linkAcessar.style.cssText = 'list-style: none; cursor: pointer'
+         linkAcessar.innerHTML = 'Indisponível'
       }
-
+      
       img.setAttribute('src', fileImg)
-      link.append(img,pAcessar)
+      
+      iconExpand.classList.add('fa-solid','fa-expand')
+      iconExpand.addEventListener('click', () => {
+         
+         
+         divImg.classList.toggle('active')
+         iconExpand.classList.toggle('active')
+         iconExpand.classList.toggle('fa-compress')
+         iconExpand.classList.toggle('fa-expand')
+
+
+      })
+
+      divImg.append(img,iconExpand)
+      divImg.style.cssText = 'position: relative; width: 70%; margin: 0 auto; transition: .4s'
+      const containerImg = {divImg,linkAcessar}
 
 
       // INSERE EM divTitle o icone eo titulo da skill
@@ -128,10 +159,38 @@ export class Carousel{
       const divTitle = [] // RETORNO ESTA VARIAVEL
       const {icon, span} = this.createTitleElement(dados.skill)
       divTitle.push(icon, span)
+      
+      
+       // CRIA O MENU
+       const ul = carousel.querySelector('.carousel-nav')
+       ul.innerHTML = ''
+       ul.append(...menuCarousel)
+       
+       // ATIVA O LINK
 
-      const card = this.createCard({ descUl, divTitle, link, titleCard, menuCarousel, carousel, side })
+       ul.querySelectorAll('li').forEach(lis => {
+          if(lis.classList.contains('active')){
+             lis.classList.remove('active')
+          }
+ 
+          if(lis.querySelector('span').textContent == divTitle[1].textContent){
+             lis.classList.add('active')
+          }
+       })
 
-      return { descUl, divTitle, link, titleCard, menuCarousel, carousel, card , side}
+      
+   const card = this.createCard({ descUl, containerImg, titleCard, carousel, side })
+   
+   this.disableEnableArrow(carousel)
+   clearInterval(this.timerInterval)
+   this.changeOrderBySetInterval() 
+
+   return {divTitle, carousel, card , side}
+}
+
+   intervalChangeCard(ms){
+      
+      
    }
    
    getCarouselElement(reference){
@@ -171,20 +230,20 @@ export class Carousel{
    }
 
    changeOrderBySetInterval(){
-      this.timerInterval = setInterval(() =>{
-       this.initCarousel += 1
-       this.createCarousel()
+         this.timerInterval = setInterval(() =>{
+            this.createCarousel()
 
-      },this.timerSetCard)
+            
+         },this.timerSecSetCard*1000)
    }
 
    changeOrderByArrow(side, card, carousel){
       let dataCarousel = this.dataCarousel[card].length-1
       let orderId = parseInt(carousel.querySelector('.active').getAttribute('orderid'))
 
+      
 
-      clearInterval(this.timerInterval)
-
+      
       switch(side){
          case 'right':
             if(orderId == dataCarousel) {
@@ -202,25 +261,45 @@ export class Carousel{
                }
                break
             }
-         
-         this.changeOrderBySetInterval()    
-       return this.createElements(this.dataCarousel[card], orderId, carousel, side)
+            
+         const elementosCard = this.createElements(this.dataCarousel[card], orderId, carousel, side)
+
+         if(elementosCard === null) return
+
+
+       return elementosCard
    }
-   disableEnableArrow(arrow){
-      let desableArrow = document.createElement('button')
-      desableArrow.style.cssText = `   position: absolute; top: -7px;  left: -7px;   width:  60px;   height: 60px; opacity: 0;   `
-      desableArrow.disabled=true
-      arrow.append(desableArrow)
+   disableEnableArrow(carousel){
+
+      const lis = carousel.querySelectorAll('.carousel-nav li');
+      const arrows = carousel.querySelectorAll('.carousel-arrow');
+
+
+      lis.forEach(li=>{
+         li.style.cssText = 'pointer-events: none'
+      })
+
+      arrows.forEach(arrow=>{
+         arrow.style.cssText = 'pointer-events: none'
+      })
+
 
       setTimeout(()=>{
-         arrow.removeChild(desableArrow)
+         lis.forEach(li=>{
+            li.style.cssText = 'pointer-events: visible'
+         })
+
+         arrows.forEach(arrow=>{
+            arrow.style.cssText = 'pointer-events: visible'
+         })
       },250)
    }
 
    alterCard(arrow){
       const {side, card} = this.checkCard(arrow);
       const carousel = this.getCarouselElement(arrow)
-      this.disableEnableArrow(arrow)
+
+      // this.disableEnableArrow(arrow)
       
      return this.changeOrderByArrow(side, card, carousel)
    }

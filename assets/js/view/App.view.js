@@ -6,35 +6,37 @@ export class AppView{
 
       const carouselCard = elementosCard.carousel.querySelector('.skill-menu-content-carousel-container-card')
       const containerCard = carouselCard.parentElement
-      const ul = elementosCard.carousel.querySelector('.carousel-nav')
 
       
       // INSERE O CARD
       containerCard.append(elementosCard.card)
-      
-      // CRIA O MENU
-      ul.innerHTML = ''
-      ul.append(...elementosCard.menuCarousel)
-      
-      // ATIVA O LINK
-      ul.querySelectorAll('li').forEach(lis => {
-         if(lis.classList.contains('active')){
-            lis.classList.remove('active')
-         }
 
-         if(lis.children[1].textContent == elementosCard.divTitle[1].textContent){
-            lis.classList.add('active')
-         }
+      // INSERE O CONTENT TITLE
+      containerCard.parentElement.parentElement.querySelector('.content-title').textContent = ''
+      elementosCard.divTitle.forEach(element => {
+         containerCard.parentElement.parentElement.querySelector('.content-title').append(element)
+
       })
+
       
+      // REALIZA A TRANSIÇÃO
       setTimeout(function(){
          const side = elementosCard.side || 'right'
          const cardFade = elementosCard.carousel.querySelector('.card-fade')
          const cardLeft = elementosCard.carousel.querySelector(`.card-${side}`) 
    
          if(cardLeft != null) {
-            cardFade.classList.toggle(`hidden-${side}`)
-            cardLeft.classList.toggle('visible')
+
+            if(!cardFade.classList.contains(`hidden-${side}`)){
+               cardFade.classList.add(`hidden-${side}`)
+            }
+
+            if(!cardLeft.classList.contains(`visible`)){
+               cardLeft.classList.add('visible')
+            }
+
+            // cardFade.classList.toggle(`hidden-${side}`)
+            // cardLeft.classList.toggle('visible')
             
             setTimeout(function(){
                cardFade.parentNode.removeChild(cardFade)
