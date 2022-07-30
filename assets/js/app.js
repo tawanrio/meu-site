@@ -1,4 +1,5 @@
 import {dataCarousel} from './data/data-carousel.js'
+import {dataPortfolio} from './data/data-portfolio.js'
 import {AppView} from './view/App.view.js'
 import {AppService} from './service/App-service.js'
 import {Carousel} from './service/Carousel-service.js'
@@ -10,6 +11,7 @@ import {AppController} from './controller/App-controller.js'
    const appService = new AppService()
    const appController = new AppController(appView, appService)
    const carouselService = new Carousel(appController, dataCarousel)
+   const portfolioService = new Portfolio(appController,dataPortfolio)
    
 initEvents()
 
@@ -99,11 +101,6 @@ document.querySelectorAll('.portfolio-grid-card').forEach(card => {
 
 })
 
-// DOWNLOAD CV
-cv.addEventListener('click',() => {
-   
-    
-})
 
 }
 })()

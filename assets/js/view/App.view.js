@@ -46,6 +46,24 @@ export class AppView{
          }
       },5)
    }
+
+   renderGrid(grid){
+      const containerGrid = document.querySelector('.portfolio-grid')
+
+      containerGrid.innerHTML = ''
+      grid.forEach(card => {
+         containerGrid.append(card)
+
+      })
+   }
+
+   renderContainerPortfolio(container){
+      const containerGrid = document.querySelector('.portfolio-grid')
+
+      containerGrid.innerHTML = ''
+      containerGrid.append(container)
+
+   }
    
    
 }

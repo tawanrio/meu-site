@@ -42,7 +42,7 @@ front: [
          
       ],
       imgLink:{
-         img: `assets/img/portfolio/electrum01.gif`,
+         img: `assets/img/portfolio/electrum.gif`,
          url: `https://tawanrio.github.io/electrum-sass/`
       },
       skill: 

@@ -1,0 +1,160 @@
+@use '../1-base/_variables'
+@use 'layouts-mixins'
+@use '../1-base/_base-mixins'
+
+main .portfolio-grid
+   width: 100%
+
+   .portfolio-container
+      display: grid
+      grid-template-columns: 25% 1fr
+      grid-template-rows: 45px 1fr 40px
+      grid-template-areas: "titleCont titleCont" "tools description" "tools footerDesc"
+      background-color: #d6dfe0
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1)
+      width: 100%
+
+      &-header
+         grid-area: titleCont
+         position: relative
+         display: flex
+         justify-content: center
+         align-items: center
+         background-color: #4487ec
+         box-shadow: 0px 10px 10px -12px rgba(0, 0, 0, 1)
+         
+         &-titleCont
+            @include layouts-mixins.title-h3
+            color: white
+         i
+            color: white
+            cursor: pointer
+            position: absolute
+            right: 0
+            padding: 5px
+            font-size: 1.5rem
+            margin: 0 20px
+
+      &-tools
+         grid-area: tools
+         box-shadow: 10px 0px 10px -13px rgba(0, 0, 0, 1)
+         background-color: white
+         text-align: start
+         padding: 30px
+         @include base-mixins.mobile
+            padding: 20px
+
+         &-titleTools
+            font-family: 'Oswald', sans-serif
+            font-weight: 300
+            font-size: 1.7rem
+            @include base-mixins.mobile
+               font-size: 1.3rem
+            
+         ul
+            margin: 10px
+            @include base-mixins.mobile
+               margin: 5px
+            li
+               margin: 15px 0
+               @include base-mixins.mobile
+                  font-size: .9rem
+                  margin: 10px 0
+
+      &-description
+         box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 1)
+         grid-area: description
+         border-radius: 5px
+         // border: solid black 2px 
+         background-color: white
+         margin: 20px
+         padding: 30px
+
+         &-titleDesc
+            font-family: 'Oswald', sans-serif
+            font-weight: 300
+            font-size: 1.7rem
+            text-align: start
+            @include base-mixins.mobile
+               font-size: 1.3rem
+
+         &-descContent
+            // border: solid black 2px 
+            display: flex
+            @include base-mixins.mobile
+               flex-direction: column 
+
+            &-ulDesc
+               margin: 10px
+
+               li
+                  text-align: start
+                  margin: 15px 0
+                  list-style: inside
+                  @include base-mixins.mobile
+                     font-size: .9rem
+                     margin: 10px 0
+            
+            &-divImg
+               position: relative
+               margin: 20px
+               width: 60%
+               transition: .5s
+               @include base-mixins.mobile
+                  margin: 0
+                  width: 100%
+
+               img
+                  width: 100%
+
+               i.fa-solid
+                  font-size: 15px
+                  color: white
+                  background-color: #02020252
+                  border-radius: 10%
+                  padding: 3px
+                  position: absolute
+                  bottom: 10%
+                  right: 5%
+                  width: 22px
+                  transition: .4s
+
+                  &:hover
+                     background-color: #020202cb
+
+            &-divImg.active
+              transition: .6s
+              position: absolute
+              left: 50%
+              top: 5%
+              z-index: 1
+              transform: translateX(-55%) scale(1.5)
+              @include base-mixins.mobile
+               transform: translateX(-50%) scale(1)
+
+
+
+         &-linkDesc
+            margin: 15px auto
+            width: 25%
+            padding: 10px
+            background-color: #1ebe2b
+            border-radius: 7px
+            @include base-mixins.mobile
+               width: 80%
+            
+            a
+               color: white
+               font-family: 'Oswald','sans-serif'
+               font-weight: 700
+
+
+      &-footerDesc
+         // border: solid black 2px 
+         grid-area: footerDesc
+         background-color: #1f1d1d
+         color: white
+
+         &-linkDesc
+            padding: 10px
+            margin: 10px 0
