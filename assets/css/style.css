@@ -705,8 +705,9 @@ main .skill .skill-menu-content-carousel-container-card hr {
 main .skill .skill-menu-content-carousel-container-card-desc {
   padding: 20px 0;
   flex-grow: 1;
-  height: 100px;
+  height: 150px;
   overflow: scroll;
+  margin-bottom: 10px;
 }
 main .skill .skill-menu-content-carousel-container-card-desc::-webkit-scrollbar {
   opacity: 0;
@@ -733,9 +734,6 @@ main .skill .skill-menu-content-carousel-container-card-desc ul li {
     padding: 0 0 5px 0;
   }
 }
-main .skill .skill-menu-content-carousel-container-card-img {
-  padding-bottom: 10px;
-}
 main .skill .skill-menu-content-carousel-container-card-img a, main .skill .skill-menu-content-carousel-container-card-img li {
   text-indent: 0;
   color: #ffffff;
@@ -749,6 +747,7 @@ main .skill .skill-menu-content-carousel-container-card-img img {
   width: 100%;
   box-shadow: 0px 0px 15px -4px #ffffff;
   transition: 0.5s;
+  height: 85%;
 }
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-container-card-img img {
