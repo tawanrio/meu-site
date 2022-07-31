@@ -42,9 +42,11 @@ main .portfolio
 
          &-title
             @include layouts-mixins.title-h4
-            font-size: 1.1rem
+            font-size: 1.2rem
             margin: 7px 0
             font-weight: 700
+            @include base-mixins.mobile
+               font-size: 2rem   
             
             hr
                @include layouts-mixins.hr
@@ -53,6 +55,8 @@ main .portfolio
          &-img
             p
                font-size: .7rem
+               @include base-mixins.mobile
+                  font-size: 1.3rem
             img
                margin: 5px auto
                width: 85%

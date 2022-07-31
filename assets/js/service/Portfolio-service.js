@@ -161,4 +161,10 @@ export class Portfolio{
 
      this.controller.renderGrid(grid)
    }
+
+   offSetMobile(){
+      if(document.documentElement.clientWidth > 600){
+         
+      }
+   }
 }

@@ -1,4 +1,5 @@
 html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-weight: 400;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
@@ -246,6 +247,11 @@ main section.skill .skill-card {
   background-repeat: no-repeat;
   background-image: url("../img/backgrounds//bg-pontilhado2.png");
   background-size: 100%;
+}
+@media (max-width: 625px) {
+  main section.portfolio {
+    margin-bottom: 50px;
+  }
 }
 main #skill-bg {
   left: 0;
@@ -638,11 +644,6 @@ main .skill .skill-menu-content-carousel-container {
   justify-content: center;
   width: 60%;
 }
-@media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel-container {
-    margin: 0 50px;
-  }
-}
 main .skill .skill-menu-content-carousel-container-card {
   box-shadow: 0px 0px 10px -1px rgba(107, 124, 199, 0.4509803922);
   border: solid white 2px;
@@ -664,7 +665,8 @@ main .skill .skill-menu-content-carousel-container-card {
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-container-card {
     width: 70%;
-    min-height: 280px;
+    min-height: 270px;
+    padding: 10px;
   }
 }
 main .skill .skill-menu-content-carousel-container-card:hover {
@@ -703,10 +705,21 @@ main .skill .skill-menu-content-carousel-container-card hr {
 main .skill .skill-menu-content-carousel-container-card-desc {
   padding: 20px 0;
   flex-grow: 1;
+  height: 100px;
+  overflow: scroll;
+}
+main .skill .skill-menu-content-carousel-container-card-desc::-webkit-scrollbar {
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-container-card-desc {
-    padding: 10px 0;
+    height: 100px;
+    background-color: rgba(100, 99, 99, 0.1294117647);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
   }
 }
 main .skill .skill-menu-content-carousel-container-card-desc ul li {
@@ -737,6 +750,11 @@ main .skill .skill-menu-content-carousel-container-card-img img {
   box-shadow: 0px 0px 15px -4px #ffffff;
   transition: 0.5s;
 }
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-carousel-container-card-img img {
+    height: 100px;
+  }
+}
 main .skill .skill-menu-content-carousel-container-card-img i.fa-solid {
   font-size: 15px;
   color: white;
@@ -755,6 +773,11 @@ main .skill .skill-menu-content-carousel-container-card-img i.fa-solid:hover {
 main .skill .skill-menu-content-carousel-container-card-img div.active {
   transition: 0.4s;
   transform: scale(2.5);
+}
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-carousel-container-card-img div.active {
+    transform: scale(2);
+  }
 }
 main .skill .skill-menu-content-nav {
   display: flex;
@@ -883,13 +906,18 @@ main .portfolio-grid-card-title {
   font-family: "Cormorant SC", serif;
   font-size: 1.8rem;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 7px 0;
   font-weight: 700;
 }
 @media (max-width: 625px) {
   main .portfolio-grid-card-title {
     font-size: 2.3rem;
+  }
+}
+@media (max-width: 625px) {
+  main .portfolio-grid-card-title {
+    font-size: 2rem;
   }
 }
 main .portfolio-grid-card-title hr {
@@ -905,6 +933,11 @@ main .portfolio-grid-card-title hr {
 main .portfolio-grid-card-img p {
   font-size: 0.7rem;
 }
+@media (max-width: 625px) {
+  main .portfolio-grid-card-img p {
+    font-size: 1.3rem;
+  }
+}
 main .portfolio-grid-card-img img {
   margin: 5px auto;
   width: 85%;
@@ -916,12 +949,17 @@ main .portfolio-grid {
 }
 main .portfolio-grid .portfolio-container {
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: 25% 1fr;
   grid-template-rows: 60px 1fr 45px;
   grid-template-areas: "titleCont titleCont" "tools description" "tools footerDesc";
   background-color: #d6dfe0;
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
   width: 100%;
+}
+@media (max-width: 625px) {
+  main .portfolio-grid .portfolio-container {
+    grid-template-columns: 30% 1fr;
+  }
 }
 main .portfolio-grid .portfolio-container-header {
   grid-area: titleCont;
@@ -942,6 +980,11 @@ main .portfolio-grid .portfolio-container-header-titleCont {
 @media (max-width: 625px) {
   main .portfolio-grid .portfolio-container-header-titleCont {
     font-size: 2.7rem;
+  }
+}
+@media (max-width: 625px) {
+  main .portfolio-grid .portfolio-container-header-titleCont {
+    font-size: 2.2rem;
   }
 }
 main .portfolio-grid .portfolio-container-header i {
@@ -1105,6 +1148,11 @@ main .portfolio-grid .portfolio-container-footerDesc {
   padding: 0 20px;
   font-size: 0.7rem;
 }
+@media (max-width: 625px) {
+  main .portfolio-grid .portfolio-container-footerDesc {
+    font-size: 0.9rem;
+  }
+}
 
 section.secwhats {
   width: 100%;
@@ -1131,7 +1179,9 @@ section.secwhats .whats .content {
 }
 @media (max-width: 625px) {
   section.secwhats .whats .content {
-    width: 90%;
+    width: 100%;
+    height: 135%;
+    top: -5%;
   }
 }
 section.secwhats .whats .content .header {

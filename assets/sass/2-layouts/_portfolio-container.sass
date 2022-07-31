@@ -4,15 +4,20 @@
 
 main .portfolio-grid
    width: 100%
+   
 
    .portfolio-container
       display: grid
-      grid-template-columns: 20% 1fr
+      grid-template-columns: 25% 1fr
       grid-template-rows: 60px 1fr 45px
       grid-template-areas: "titleCont titleCont" "tools description" "tools footerDesc"
       background-color: #d6dfe0
       box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1)
       width: 100%
+      @include base-mixins.mobile
+          grid-template-columns: 30% 1fr
+          
+      
 
       &-header
          grid-area: titleCont
@@ -26,6 +31,8 @@ main .portfolio-grid
          &-titleCont
             @include layouts-mixins.title-h3
             color: white
+            @include base-mixins.mobile   
+               font-size: 2.2rem
          i
             color: white
             cursor: pointer
@@ -162,4 +169,6 @@ main .portfolio-grid
          justify-content: flex-end
          padding: 0 20px
          font-size: .7rem
+         @include base-mixins.mobile
+            font-size: .9rem
          

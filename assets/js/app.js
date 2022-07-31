@@ -101,7 +101,6 @@ document.querySelectorAll('.portfolio-grid-card').forEach(card => {
 
 })
 
-
 }
 })()
 

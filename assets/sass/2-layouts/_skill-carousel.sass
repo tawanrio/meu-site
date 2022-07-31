@@ -105,8 +105,7 @@ main .skill .skill-menu
         justify-content: center
         width: 60%
         // min-width: 750px
-        @include base-mixins.mobile
-          margin: 0 50px
+        
 
         &-card
           box-shadow: 0px 0px 10px -1px #6b7cc773
@@ -126,7 +125,8 @@ main .skill .skill-menu
 
           @include base-mixins.mobile
             width: 70%
-            min-height: 280px
+            min-height: 270px
+            padding: 10px
 
           
           &:hover
@@ -148,12 +148,23 @@ main .skill .skill-menu
 
 
           &-desc
+            // display: none
             padding: 20px 0
             flex-grow: 1
+            height: 100px
+            overflow: scroll
+        
+            &::-webkit-scrollbar 
+              opacity: 0
+              height: 0
+              width: 0
             
-            // height: 5v
             @include base-mixins.mobile
-              padding: 10px 0 
+              height: 100px
+              background-color: #64636321
+              border-radius: 10px
+              margin-bottom: 15px
+              padding: 10px  
             
             ul 
                 li
@@ -180,6 +191,8 @@ main .skill .skill-menu
               width: 100%
               box-shadow: 0px 0px 15px -4px #ffffff
               transition: .5s
+              @include base-mixins.mobile
+                height: 100px
 
             i.fa-solid
               font-size: 15px
@@ -199,6 +212,8 @@ main .skill .skill-menu
             div.active
               transition: .4s
               transform: scale(2.5)
+              @include base-mixins.mobile
+                transform: scale(2) 
 
                 
     &-nav
