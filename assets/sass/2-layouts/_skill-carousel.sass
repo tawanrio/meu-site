@@ -55,7 +55,8 @@ main .skill .skill-menu
 
         @include base-mixins.mobile
           // margin: 0 20px
-          font-size: 2rem
+          font-size: 3rem
+          margin: 0 20px
         
 
         &:hover
@@ -160,7 +161,7 @@ main .skill .skill-menu
                   list-style: inside
                   text-align: start
                   @include base-mixins.mobile
-                    font-size: .8rem
+                    font-size: 1rem
                     padding: 0 0 5px 0
 
           &-img
@@ -170,7 +171,7 @@ main .skill .skill-menu
               text-indent: 0
               color: #ffffff
               
-              font-size: 1.2em
+              font-size: 1.2rem
 
               &:hover
                 color: variables.$text-hover
@@ -201,6 +202,8 @@ main .skill .skill-menu
 
                 
     &-nav
+      display: flex
+      flex-wrap: nowrap
       ul
           padding: 0px 10px
           width: 55%
@@ -208,6 +211,8 @@ main .skill .skill-menu
           display: flex
           flex-wrap: wrap
           justify-content: space-evenly
+          @include base-mixins.mobile
+            width: 100%
 
           i
             width: 25px
@@ -220,18 +225,17 @@ main .skill .skill-menu
             @include base-mixins.mobile
               height: 19px
               padding: 5px 0 0px 0
-              width: 20px
+              width: 22px
             
           li
             align-items: center
             flex-direction: column
-            
             cursor: pointer
             display: flex
             color: #60daff4f
             margin: 0 10px
             @include base-mixins.mobile
-              margin: 0 5px
+              margin: 0
 
             
 
@@ -251,10 +255,6 @@ main .skill .skill-menu
             font-weight: 600
 
             i
-              // color: variables.$secundary-bg-color
-              // color: black
-              // background-color: #60daff
               color: variables.$secundary-bg-color
               background-color: #1b61ac
-              // background-color: variables.$text-hover
               transition: .4s

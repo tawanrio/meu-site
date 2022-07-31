@@ -109,6 +109,8 @@ export class Portfolio{
       link.setAttribute('href',data.url)
       link.setAttribute('target', '_blank')
 
+      footerDesc.innerHTML = `Período de desenvolvimento: ${data.date}`
+
       header.append(titleCont,iconClose)
       linkDesc.append(link)
       divImg.append(imgDesc,iconImg)

@@ -7,8 +7,8 @@ main .portfolio-grid
 
    .portfolio-container
       display: grid
-      grid-template-columns: 25% 1fr
-      grid-template-rows: 45px 1fr 40px
+      grid-template-columns: 20% 1fr
+      grid-template-rows: 60px 1fr 45px
       grid-template-areas: "titleCont titleCont" "tools description" "tools footerDesc"
       background-color: #d6dfe0
       box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1)
@@ -81,6 +81,7 @@ main .portfolio-grid
          &-descContent
             // border: solid black 2px 
             display: flex
+            justify-content: space-between
             @include base-mixins.mobile
                flex-direction: column 
 
@@ -98,7 +99,8 @@ main .portfolio-grid
             &-divImg
                position: relative
                margin: 20px
-               width: 60%
+               width: 40%
+               height: 40%
                transition: .5s
                @include base-mixins.mobile
                   margin: 0
@@ -117,7 +119,7 @@ main .portfolio-grid
                   bottom: 10%
                   right: 5%
                   width: 22px
-                  transition: .4s
+                  // transition: .4s
 
                   &:hover
                      background-color: #020202cb
@@ -127,8 +129,9 @@ main .portfolio-grid
               position: absolute
               left: 50%
               top: 5%
+              height: 52%
               z-index: 1
-              transform: translateX(-55%) scale(1.5)
+              transform: translateX(-54%) translatey(22%) scale(2.4)
               @include base-mixins.mobile
                transform: translateX(-50%) scale(1)
 
@@ -153,8 +156,10 @@ main .portfolio-grid
          // border: solid black 2px 
          grid-area: footerDesc
          background-color: #1f1d1d
-         color: white
-
-         &-linkDesc
-            padding: 10px
-            margin: 10px 0
+         color: #bbb
+         display: flex 
+         align-items: center
+         justify-content: flex-end
+         padding: 0 20px
+         font-size: .7rem
+         

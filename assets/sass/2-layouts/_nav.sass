@@ -4,14 +4,13 @@
 
 header nav.nav
    display: flex
-   flex-direction: column
    justify-content: center
+   align-items: center
    position: absolute
    top: 50px
-   // right: 14vw
    left: 50%
    width: 70%
-   height: 45px
+   // height: 45px
    max-width: 1300px
    color: variables.$text-color-dark
    background-image: linear-gradient(to right, #f1f1f1, #f1f1f1, #f5f3f1, #f1f1f100 )
@@ -26,18 +25,22 @@ header nav.nav
       top: 35px
 
    @include base-mixins.mobile
-      transform: translateX(0%) translateZ(0) !important
-      position: static
+      flex-direction: row
+      position: relative
+      display: flex
       width: 100%
+      top: 10px
       border-radius: 0
       background-image: linear-gradient(to right, #0650a5, #0051ad, #0650a5 )
       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3)
       
    ul
       display: flex
+      width: 100%
+      
       justify-content: space-evenly
       @include base-mixins.mobile
-         // flex-direction: column
+         flex-wrap: wrap
 
       a#cv
          border: solid #ee0000 2px

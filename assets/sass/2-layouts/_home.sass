@@ -34,13 +34,15 @@ header .home
       margin-top: 5%
       @include base-mixins.wid1080
          margin: 0 0 0 35px
-
+      @include base-mixins.mobile
+         margin: 0
       .social-media-subtitulo
          font-size: 1.5rem
          visibility: hidden
 
          @include base-mixins.mobile
             visibility: visible
+            font-size: 1.3rem
          
       a
          @include layouts-mixins.center-content

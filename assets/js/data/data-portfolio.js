@@ -12,7 +12,8 @@ export const dataPortfolio = {
          `Possui logica de colisão com obstaculos e barreiras.`,
       ],
       img:'assets/img/portfolio/jogo-impossivel.gif',
-      url:'http://tawanrio.com/jogo-impossivel/'
+      url:'http://tawanrio.com/jogo-impossivel/',
+      date:'13/08/2021 - 23/10/2021'
 
    },
    autoatendimento:{
@@ -32,7 +33,8 @@ export const dataPortfolio = {
          `Interações com o banco de dados: criar, ler, atualizar, deletar e pesquisar - com filtro`,
       ],
       img:'assets/img/portfolio/auto-atendimento.gif',
-      url:'http://tawanrio.com/tintas-estancia/'
+      url:'http://tawanrio.com/tintas-estancia/',
+      date:'25/10/2021 - 20/01/2022'
    },
    innout:{
       titleCont:"In n' Out",
@@ -52,7 +54,8 @@ export const dataPortfolio = {
          `Registro de ponto com informações de: entrada, intervalo, saida`,
       ],
       img:'assets/img/portfolio/innout.gif',
-      url:'http://tawanrio.com/tintas-estancia/'
+      url:'http://tawanrio.com/tintas-estancia/',
+      date:'07/02/2022 - 10/04/2022'
    },
    todolist:{
       titleCont:"Todo List",
@@ -70,7 +73,8 @@ export const dataPortfolio = {
                // `Dados salvo no cache do navegador`,
       ],
       img:'assets/img/portfolio/todo-list.jpg',
-      url:'#'
+      url:'#',
+      date:'15/05/2022 - 22/06/2022'
    },
    jogodavelha:{
       titleCont:"Jogo da velha",
@@ -85,7 +89,8 @@ export const dataPortfolio = {
          `Lógica básica para jogar vs o Computador`,
       ],
       img:'assets/img/portfolio/jogo-da-velha.gif',
-      url:'http://tawanrio.com/jogo-da-velha/'
+      url:'http://tawanrio.com/jogo-da-velha/',
+      date:'26/06/2021 - 30/06/2021'
    },
    electrum:{
       titleCont:"Electrum",
@@ -100,7 +105,8 @@ export const dataPortfolio = {
          `Interface responsiva para acesso mobile`,
       ],
       img:'assets/img/portfolio/electrum.gif',
-      url:'https://tawanrio.github.io/electrum-sass/'
+      url:'https://tawanrio.github.io/electrum-sass/',
+      date:'17/04/2022 - 30/04/2022'
    },
    papelaria:{
       titleCont:"Site papelaria",
@@ -112,7 +118,8 @@ export const dataPortfolio = {
          `Possui catalogo, grid e carrossel`,
       ],
       img:'assets/img/portfolio/site-agda.png',
-      url:'#'
+      url:'#',
+      date:'sem histórico de data'
    },
 
 }
