@@ -92,6 +92,9 @@ main .portfolio-grid
             @include base-mixins.mobile
                flex-direction: column 
 
+            @include base-mixins.wid1080
+               flex-direction: column 
+
             &-ulDesc
                margin: 10px
 
@@ -105,16 +108,24 @@ main .portfolio-grid
             
             &-divImg
                position: relative
-               margin: 20px
-               width: 40%
+               margin: 10px
+               width: 70%
                height: 40%
-               transition: .5s
+               transition: .4s
                @include base-mixins.mobile
                   margin: 0
                   width: 100%
 
-               img
+               @include base-mixins.wid1080
+                  width: 80%
+                  margin: 0 auto
+
+               &-container
+                  position: relative   
                   width: 100%
+
+                  img
+                     width: 100%
 
                i.fa-solid
                   font-size: 15px
@@ -132,16 +143,21 @@ main .portfolio-grid
                      background-color: #020202cb
 
             &-divImg.active
-              transition: .6s
-              position: absolute
-              left: 50%
-              top: 5%
-              height: 52%
-              z-index: 1
-              transform: translateX(-54%) translatey(22%) scale(2.4)
-              @include base-mixins.mobile
-               transform: translateX(-50%) scale(1)
+               transition: .4s
+               transform: translateX(-54%) translateY(-50%)  scale(1.3)
+               position: absolute
+               top: 5%
+               left: 50%
+               @include base-mixins.wid1080
+                  transform: translateX(-50%) scale(1.07)
 
+               @include base-mixins.mobile
+                  transform: translateX(-50%) scale(1.1)
+                  height: 37%
+
+
+            .div-img-static
+               display: none
 
 
          &-linkDesc

@@ -23,10 +23,13 @@ export class Portfolio{
       const descContent = document.createElement('div')
       const ulDesc = document.createElement('ul')
       const divImg = document.createElement('div')
+      const divImgContainer = document.createElement('div')
+      let link
       const imgDesc = document.createElement('img')
       const iconImg = document.createElement('i')
+      const iconlink = document.createElement('a')
       const linkDesc = document.createElement('div')
-      const link = document.createElement('a')
+      
       const footerDesc = document.createElement('div')
 
       // insert class
@@ -49,6 +52,7 @@ export class Portfolio{
       descContent.className = "portfolio-container-description-descContent"
       ulDesc.className = "portfolio-container-description-descContent-ulDesc"
       divImg.className = "portfolio-container-description-descContent-divImg"
+      divImgContainer.className = "portfolio-container-description-descContent-divImg-container"
       linkDesc.className = "portfolio-container-description-linkDesc"
       
       footerDesc.className = "portfolio-container-footerDesc"
@@ -78,7 +82,7 @@ export class Portfolio{
          ulDesc.append(liDesc)
       })
 
-      
+      iconlink.setAttribute('href', '#portfolio')
       iconImg.classList.add('fa-solid','fa-expand')
       iconImg.addEventListener('click', () => {
          
@@ -105,15 +109,29 @@ export class Portfolio{
       
       imgDesc.setAttribute('src', data.img)
 
-      link.innerHTML = 'Link do projeto'
-      link.setAttribute('href',data.url)
-      link.setAttribute('target', '_blank')
+      if(data.url !== '#'){
+         link = document.createElement('a')
+         link.innerHTML = 'Link do projeto'
+         link.setAttribute('href',data.url)
+         link.setAttribute('target', '_blank')
+
+      }else{
+         link = document.createElement('li')
+         link.style.cssText = 'list-style: none;'
+         link.innerHTML = 'Indisponível'
+         linkDesc.style.cssText = 'background-color:silver'
+         
+      }
+
+      
 
       footerDesc.innerHTML = `Período de desenvolvimento: ${data.date}`
 
       header.append(titleCont,iconClose)
       linkDesc.append(link)
-      divImg.append(imgDesc,iconImg)
+      iconlink.append(iconImg)
+      divImgContainer.append(imgDesc,iconlink)
+      divImg.append(divImgContainer)
       descContent.append(ulDesc,divImg)
       description.append(titleDesc,descContent,linkDesc)
       
@@ -126,7 +144,8 @@ export class Portfolio{
    }
 
    createCard(data){
-      const card = document.createElement('div')
+      const cardLink = document.createElement('div')
+      const card = document.createElement('a')
       const titleCard = document.createElement('h2')
 
       const divImg = document.createElement('div')
@@ -145,9 +164,11 @@ export class Portfolio{
          this.createContainer(data)
       })
 
-      divImg.append(img,pImg)
-      card.append(titleCard,divImg)
+      card.setAttribute('href', '#portfolio')
 
+      divImg.append(img,pImg)
+      cardLink.append(titleCard,divImg)
+      card.append(cardLink)
       return card
    }
 
