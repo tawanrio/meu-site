@@ -123,8 +123,6 @@ export class Portfolio{
          
       }
 
-      
-
       footerDesc.innerHTML = `Período de desenvolvimento: ${data.date}`
 
       header.append(titleCont,iconClose)

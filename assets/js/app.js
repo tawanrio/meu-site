@@ -55,52 +55,6 @@ document.querySelectorAll('.carousel-arrow').forEach(arrow => {
 })
 
 
-function replaceSpecialChars(str){
-   str = str.replace(/[ÀÁÂÃÄÅ]/,"A");
-   str = str.replace(/[àáâãäå]/,"a");
-   str = str.replace(/[ÈÉÊË]/,"E");
-   str = str.replace(/[Ìíîï]/,"i");
-   str = str.replace(/[Ç]/,"C");
-   str = str.replace(/[ç]/,"c");
-   str = str.toLowerCase()
-
-   return str.replace(/[^a-z0-9]/gi,''); 
-}
-
-//  TROCA IMAGEM PNG POR GIF NO PORTFOLIO
-document.querySelectorAll('.portfolio-grid-card').forEach(card => {
-   card.addEventListener('click',function(){
-      
-   })
-
-
-   card.addEventListener('mouseenter', function(){
-   //    const src = this.querySelector('img').getAttribute('src').replace('png','gif');
-      
-   //    if( replaceSpecialChars(this.querySelector('h3').textContent) === 'missaoimpossivel'){
-   //       this.querySelector('img').setAttribute('src',src);
-   //    }
-   //    if( replaceSpecialChars(this.querySelector('h3').textContent) === 'autoatendimento'){
-   //       this.querySelector('img').setAttribute('src',src);
-   //    }
-
-   // })
-
-   // card.addEventListener('mouseleave', function(){
-   //    const src = this.querySelector('img').getAttribute('src').replace('gif','png');
-      
-   //    if( replaceSpecialChars(this.querySelector('h3').textContent) === 'missaoimpossivel'){
-   //       this.querySelector('img').setAttribute('src',src);
-   //    }
-   //    if( replaceSpecialChars(this.querySelector('h3').textContent) === 'autoatendimento'){
-   //       this.querySelector('img').setAttribute('src',src);
-   //    }
-
-
-   })
-
-})
-
 }
 })()
 
