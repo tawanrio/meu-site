@@ -521,9 +521,6 @@ main .skill-card-skill ul li:hover i {
   display: none;
 }
 
-main .skill .skill-menu {
-  margin: 10px 0;
-}
 main .skill .skill-menu-top {
   background-color: rgba(111, 162, 209, 0.9725490196);
   height: 4px;
@@ -534,16 +531,10 @@ main .skill .skill-menu-bottom {
 }
 main .skill .skill-menu-content {
   background-color: #3a3c42;
-  font-size: 0.8rem;
-  padding: 30px 0 60px 0;
-}
-@media (max-width: 625px) {
-  main .skill .skill-menu-content {
-    padding: 5px 0 20px 0;
-  }
+  padding: 20px 0;
 }
 main .skill .skill-menu-content-title {
-  padding: 5px 0 15px 0;
+  padding: 15px 0;
   color: white;
   font-weight: 600;
   font-family: "Cormorant SC", serif;
@@ -565,8 +556,7 @@ main .skill .skill-menu-content-title i {
   margin-right: 10px;
 }
 main .skill .skill-menu-content-carousel {
-  padding: 0px 0 10px 0;
-  min-height: 500px;
+  height: 485px;
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -576,17 +566,17 @@ main .skill .skill-menu-content-carousel {
 }
 @media (max-width: 1280px) {
   main .skill .skill-menu-content-carousel {
-    min-height: 435px;
+    height: 475px;
   }
 }
 @media (max-width: 1080px) {
   main .skill .skill-menu-content-carousel {
-    min-height: 400px;
+    height: 390px;
   }
 }
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel {
-    min-height: 300px;
+    height: 320px;
   }
 }
 main .skill .skill-menu-content-carousel .carousel-arrow {
@@ -595,12 +585,6 @@ main .skill .skill-menu-content-carousel .carousel-arrow {
   cursor: pointer;
   color: rgba(111, 162, 209, 0.9725490196);
   transition: 0.5s;
-}
-@media (max-width: 625px) {
-  main .skill .skill-menu-content-carousel .carousel-arrow {
-    font-size: 3rem;
-    margin: 0 20px;
-  }
 }
 main .skill .skill-menu-content-carousel .carousel-arrow:hover {
   transform: scale(1.2);
@@ -644,22 +628,31 @@ main .skill .skill-menu-content-carousel-container {
   justify-content: center;
   width: 60%;
 }
+@media (max-width: 1080px) {
+  main .skill .skill-menu-content-carousel-container {
+    width: 80%;
+  }
+}
+@media (max-width: 625px) {
+  main .skill .skill-menu-content-carousel-container {
+    width: 75%;
+  }
+}
 main .skill .skill-menu-content-carousel-container-card {
   box-shadow: 0px 0px 10px -1px rgba(107, 124, 199, 0.4509803922);
   border: solid white 2px;
   color: white;
-  padding: 5px 50px;
+  padding: 15px 50px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  width: 50%;
-  min-height: 420px;
+  width: 55%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.1725490196);
 }
 @media (max-width: 1080px) {
   main .skill .skill-menu-content-carousel-container-card {
-    min-height: 350px;
-    padding: 5px 30px;
+    width: 70%;
   }
 }
 @media (max-width: 625px) {
@@ -703,24 +696,13 @@ main .skill .skill-menu-content-carousel-container-card hr {
   top: 0;
 }
 main .skill .skill-menu-content-carousel-container-card-desc {
-  padding: 20px 0;
   flex-grow: 1;
-  height: 150px;
-  overflow: scroll;
+  overflow: auto;
   margin-bottom: 10px;
-}
-main .skill .skill-menu-content-carousel-container-card-desc::-webkit-scrollbar {
-  opacity: 0;
-  height: 0;
-  width: 0;
 }
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-container-card-desc {
-    height: 100px;
-    background-color: rgba(100, 99, 99, 0.1294117647);
     border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 10px;
   }
 }
 main .skill .skill-menu-content-carousel-container-card-desc ul li {
@@ -733,6 +715,9 @@ main .skill .skill-menu-content-carousel-container-card-desc ul li {
     font-size: 1rem;
     padding: 0 0 5px 0;
   }
+}
+main .skill .skill-menu-content-carousel-container-card-img {
+  margin-bottom: 10px;
 }
 main .skill .skill-menu-content-carousel-container-card-img a, main .skill .skill-menu-content-carousel-container-card-img li {
   text-indent: 0;
@@ -747,7 +732,7 @@ main .skill .skill-menu-content-carousel-container-card-img img {
   width: 100%;
   box-shadow: 0px 0px 15px -4px #ffffff;
   transition: 0.5s;
-  height: 85%;
+  height: 15vw;
 }
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-container-card-img img {
@@ -771,7 +756,7 @@ main .skill .skill-menu-content-carousel-container-card-img i.fa-solid:hover {
 }
 main .skill .skill-menu-content-carousel-container-card-img div.active {
   transition: 0.4s;
-  transform: scale(2.5);
+  transform: scale(2.5) translateY(20%);
 }
 @media (max-width: 625px) {
   main .skill .skill-menu-content-carousel-container-card-img div.active {
@@ -781,6 +766,7 @@ main .skill .skill-menu-content-carousel-container-card-img div.active {
 main .skill .skill-menu-content-nav {
   display: flex;
   flex-wrap: nowrap;
+  padding: 15px 0;
 }
 main .skill .skill-menu-content-nav ul {
   padding: 0px 10px;
@@ -1195,7 +1181,6 @@ section.secwhats .whats .content {
   height: 124%;
   margin: auto;
   border-radius: 20px;
-  background: linear-gradient(to bottom, #31394d -17%, #4972b9, #4972b9, #4972b9, #31394d 117%);
   background: linear-gradient(to bottom, #173d28 -17%, #4972b9, #3b7ca7, #4972b9, #173d28 117%);
 }
 @media (max-width: 625px) {

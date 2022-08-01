@@ -18,8 +18,6 @@ initEvents()
 
 function initEvents(){
 
-
-   
    // Enviar  Whats
 document.querySelector('form#whats').addEventListener('submit', function(e){
    e.preventDefault();

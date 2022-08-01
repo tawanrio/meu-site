@@ -7,7 +7,6 @@ export class Carousel{
       this.timerSecSetCard = 15
       this.lastChange = {front: new Date(), back: new Date()}
       this.newChange = {front: null, back: null}
-      
 
       this.createCarousel()
    }
@@ -34,8 +33,8 @@ export class Carousel{
       let lado = elementosCard.side || 'right'
 
       const card = document.createElement('div')
-      const title = document.createElement('h3')
-      const hr = document.createElement('hr')
+      // const title = document.createElement('h3')
+      // const hr = document.createElement('hr')
       const desc = document.createElement('div')
       const ul = document.createElement('ul')
       const img = document.createElement('div')
@@ -43,9 +42,9 @@ export class Carousel{
       card.id = 'card'
       card.className = `skill-menu-content-carousel-container-card card-${lado}`
 
-      title.className = 'skill-menu-content-carousel-container-card-title carousel-title'
-      title.innerHTML = elementosCard.titleCard 
-      
+      // title.className = 'skill-menu-content-carousel-container-card-title carousel-title'
+
+     
       desc.className = 'skill-menu-content-carousel-container-card-desc'
       
       ul.className = 'carousel-ul'
@@ -62,12 +61,13 @@ export class Carousel{
 
       }
 
-
-      card.append(title)
-      card.append(hr)
+      // console.log();
+      
+      // card.append(title)
+      // card.append(hr)
       desc.append(ul)
-      card.append(desc)
       card.append(img)
+      card.append(desc)
 
 
       return card 
@@ -157,6 +157,7 @@ export class Carousel{
       divImg.append(img,iconExpand)
       divImg.style.cssText = 'position: relative; width: 70%; margin: 0 auto; transition: .4s'
       const containerImg = {divImg,linkAcessar}
+      // const containerImg = {divImg,linkAcessar}
 
 
       // INSERE EM divTitle o icone eo titulo da skill
@@ -184,7 +185,7 @@ export class Carousel{
        })
 
       
-   const card = this.createCard({ descUl, containerImg, titleCard, carousel, side })
+   const card = this.createCard({ descUl, containerImg, divTitle, carousel, side })
    
    this.disableEnableArrow(carousel)
    clearInterval(this.timerInterval)
