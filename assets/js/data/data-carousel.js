@@ -8,7 +8,7 @@ front: [
       },
       descLi: [
          `Dominar a linguagem Javascript.`,
-         `Desenvolver diversos códigos em exemplos práticos do mundo real.`,
+         `Desenvolver diversos códigos em exemplos práticos reais.`,
          `Conhecer as principais novidades no ES6.`,
          `Iniciar com orientação a objetos em Javascript.`,
          // `Dar os primeiros passos com TypeScript.`,
@@ -28,13 +28,13 @@ front: [
             span: `JQuery`
          },
       descLi: [
-         `Manipular elementos na tela de forma fácil e rápida`,
+         `Manipular elementos na tela de forma fácil e rápida.`,
          `Fazer animações e efeitos especiais avançados no seu site.`,
          `Fazer qualquer tipo de requisição ajax de forma fácil e simples.`,
          `Adicionar, remover e estilizar qualquer elemento do seu sistema.`,
          `Aplicar ações em formulários, teclado e mouse.`,
          `Aprender a criar seus próprios plugins jQuery.`,
-         `Exercitar com vários projetos práticos da vida real.`,
+         `Exercitar com vários projetos práticos da realidade.`,
       ],
       imgLink:{
          img: `assets/img/certificados/certificado-jquery.jpg`,
@@ -49,10 +49,10 @@ front: [
          },
       descLi: [
          `Criar projetos com SASS ou SCSS.`,
-         `Aprender a arquiteturar projetos com SASS ou SCSS.`,
+         `Aprender a arquitetar projetos com SASS ou SCSS.`,
          `Criar layouts responsivos e modernos.`,
          `Aprender mais sobre HTML e CSS.`,
-         `Boas práticas de frontend.`,
+         `Boas práticas de front-end.`,
          
       ],
       imgLink:{
@@ -87,11 +87,11 @@ back: [
       descLi: [
          `Criar uma base sólida em PHP, desde os princípios mais básicos.`,
          `Conhecer a sintaxe do PHP, os tipos e variáveis da linguagem.`,
-         `Enteder as estruturas de lógica e repetições.`,
-         `Criar funções, classes e objetos em PHP`,
-         `Integrar o PHP com HTML, CSS e Javascript`,
-         `Integrar a aplicação com banco de dados usando PDO e MySQLi`,
-         `Criar projetos PHP de aplicações reais e com layouts atrativos`,
+         `Entender as estruturas de lógica e repetições.`,
+         `Criar funções, classes e objetos em PHP.`,
+         `Integrar o PHP com HTML, CSS e Javascript.`,
+         `Integrar a aplicação com banco de dados usando PDO e MySQLi.`,
+         `Criar projetos PHP de aplicações reais e com layouts atrativos.`,
       ],
       imgLink:{
          img: `assets/img/certificados/certificado-php.jpg`,
