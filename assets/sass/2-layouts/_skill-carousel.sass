@@ -16,6 +16,8 @@ main .skill .skill-menu
   &-content
     background-color: #3a3c42
     padding: 20px 0
+    @include base-mixins.mobile
+      padding: 50px 0
 
     &-title
       padding: 15px 0
@@ -160,35 +162,59 @@ main .skill .skill-menu
 
               &:hover
                 color: variables.$text-hover
-            img
-              margin: 0 auto
+
+            .divImg
               width: 100%
-              box-shadow: 0px 0px 15px -4px #ffffff
-              transition: .5s
-              height: 15vw
-              @include base-mixins.mobile
-                height: 100px
+              position: relative
+              display: flex
+              // border: solid red 4px 
 
-            i.fa-solid
-              font-size: 15px
-              color: white
-              background-color: #02020252
-              border-radius: 10%
-              padding: 3px
-              position: absolute
-              bottom: 10%
-              right: 5%
-              width: 22px
-              transition: .4s
+              .divImgContainer
+                position: relative
+                width: 80%
+                margin: auto
 
-              &:hover
-                background-color: #020202cb
+              img
+                width: 100%
+                height: 13rem
+                // margin: 0 auto
+                // box-shadow: 0px 0px 15px -4px #ffffff
+                // transition: .5s
+                // height: 15vw
+                // @include base-mixins.mobile
+
+              i.fa-solid
+                font-size: 15px
+                color: white
+                background-color: #02020252
+                border-radius: 10%
+                padding: 3px
+                position: absolute
+                bottom: 10%
+                right: 5%
+                width: 22px
+                transition: .4s
+
+                &:hover
+                  background-color: #020202cb
 
             div.active
+              transform: scale(1.1) translateY(-15%)
               transition: .4s
-              transform: scale(2.5) translateY(20%)
-              @include base-mixins.mobile
-                transform: scale(2) 
+              position: absolute
+              width: 100%
+              height: 100vh
+              left: -0%
+              background-color: #00000088
+              backdrop-filter: blur(3px)
+
+              i.fa-solid
+                transform: scale(1.7)
+              img
+                height: 25rem
+
+              div
+                width: 100%
 
                 
     &-nav

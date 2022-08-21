@@ -118,12 +118,18 @@ export class Carousel{
       let linkAcessar
       const img = document.createElement('img')
       const iconExpand = document.createElement('i')
-
+      const iconlink = document.createElement('a')
+      // iconlink.setAttribute('href', '#skill-title')
+      
       const divImg = document.createElement('div')
-
+      const divImgContainer = document.createElement('div')
+      divImgContainer.className = 'divImgContainer'
+      divImg.className = 'divImg'
+      divImg.id = 'divImg'
+      
       
       // let containerImg // RETORNO ESTA VARIAVEL
-
+      
       if(url !== '#'){
          linkAcessar = document.createElement('a')
          linkAcessar.setAttribute('href', url)
@@ -139,8 +145,29 @@ export class Carousel{
       
       iconExpand.classList.add('fa-solid','fa-expand')
       iconExpand.addEventListener('click', () => {
+
+         let copyCard = card
+         while(! (copyCard.classList.contains('back') || copyCard.classList.contains('front')) ){
+            copyCard = copyCard.parentNode
+         }
+         if(copyCard.classList.contains('back')){
+            copyCard = '#back' 
+         }else{
+            copyCard = '#front' 
+         }
+         iconlink.setAttribute('href', `${copyCard}`)
          
+         if(divImg.classList.contains('active')){
+            card.style.cssText = 'width: 55%;'
+            document.querySelector('body').style.overflow = 'auto';
+            
+         }else{
+            icon.id = 'skill-title'
+            document.querySelector('body').style.overflow = 'hidden';
+            card.style.cssText = 'width: 100%;'
+         }
          
+
          divImg.classList.toggle('active')
          iconExpand.classList.toggle('active')
          iconExpand.classList.toggle('fa-compress')
@@ -154,8 +181,11 @@ export class Carousel{
 
       })
 
-      divImg.append(img,iconExpand)
-      divImg.style.cssText = 'position: relative; width: 70%; margin: 0 auto; transition: .4s'
+      iconlink.append(iconExpand)
+      divImgContainer.append(img,iconlink)
+      divImg.append(divImgContainer)
+      // divImg.style.cssText = 'position: relative; width: 70%; margin: 0 auto; transition: .4s'
+      // const containerImg = {divImg,linkAcessar}
       const containerImg = {divImg,linkAcessar}
       // const containerImg = {divImg,linkAcessar}
 

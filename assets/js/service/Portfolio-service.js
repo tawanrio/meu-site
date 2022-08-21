@@ -49,6 +49,7 @@ export class Portfolio{
       
       description.className = "portfolio-container-description"
       titleDesc.className = "portfolio-container-description-titleDesc"
+
       descContent.className = "portfolio-container-description-descContent"
       ulDesc.className = "portfolio-container-description-descContent-ulDesc"
       divImg.className = "portfolio-container-description-descContent-divImg"
@@ -82,13 +83,15 @@ export class Portfolio{
          ulDesc.append(liDesc)
       })
 
-      iconlink.setAttribute('href', '#portfolio')
+      iconlink.setAttribute('href', '#portfolio-id')
       iconImg.classList.add('fa-solid','fa-expand')
       iconImg.addEventListener('click', () => {
          
          if(divImg.classList.contains('active')){
             const imgStatic = document.querySelector('.div-img-static')
             imgStatic.parentElement.removeChild(imgStatic)
+            document.querySelector('body').style.overflow = 'auto';
+            document.querySelector('section.secwhats .content').style.display = 'block'
          }else{
 
             
@@ -100,11 +103,14 @@ export class Portfolio{
             
                expandDiv.append(expandImg)
                descContent.append(expandDiv)
+               document.querySelector('body').style.overflow = 'hidden';
+               document.querySelector('section.secwhats .content').style.display = 'none'
             }
-            divImg.classList.toggle('active')
+         divImg.classList.toggle('active')
          iconImg.classList.toggle('active')
          iconImg.classList.toggle('fa-compress')
          iconImg.classList.toggle('fa-expand')
+
       })
       
       imgDesc.setAttribute('src', data.img)
@@ -162,7 +168,7 @@ export class Portfolio{
          this.createContainer(data)
       })
 
-      card.setAttribute('href', '#portfolio')
+      card.setAttribute('href', '#portfolio-id')
 
       divImg.append(img,pImg)
       cardLink.append(titleCard,divImg)
