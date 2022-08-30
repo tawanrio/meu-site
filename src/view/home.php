@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,6 +22,7 @@
  
 </head>
 <body>
+<input type="hidden" name="access" id="access" value="<?php echo Database::getAcessAll(); ?>" />
    <header id="home" class="header">
       <nav class="nav" data-aos="fade-down"
       data-aos-easing="linear"
@@ -55,7 +57,7 @@
          </div>
          </div>
          <div class="home-social-media">
-            <a href="https://www.linkedin.com/in/tawan-rio-47883a181/" target="_blank" >
+            <a href="https://www.linkedin.com/in/tawanrio/" target="_blank" >
                <i class="fab fa-linkedin-in in"></i>
                <span class="social-media-subtitulo">Linkedin</span>
             </a>
@@ -75,14 +77,14 @@
       </header>
      
       <main class="main" >
-         <section id="skill" class="skill" >
-            <h2 class="skill-title" data-aos="fade-up" data-aos-duration="1000">Habilidades</h2>
-            <div class="skill-card" data-aos="fade-up" data-aos-duration="1500">
+         <section id="skill" class="skill">
+            <h2 class="skill-title aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">Habilidades</h2>
+            <div class="skill-card aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                <div class="skill-card-img">
                   <img src="assets/img/geral/server4.png" alt="">
                   <span></span>
                </div>
-               <div  class="skill-card-content">
+               <div class="skill-card-content">
                   <h3 class="skill-card-content-title">Back-end<hr></h3>
                   <p>
                         Desenvolvimento bem estruturado seguindo o padrão <b><i><a href="#skill">MVC</a></i></b>
@@ -97,60 +99,21 @@
                  <div class="skill-menu-top"></div>
 
                  <div class="skill-menu-content back" id="back">
-                    <div class="skill-menu-content-title content-title">
-                        <i class="fa-solid fa-database"></i>
-                        <span >MYSQL/NOSQL</span>
-                    </div>
+                    <div class="skill-menu-content-title content-title"><i class="fa-brands fa-php"></i><span>PHP</span></div>
 
                      <div class="skill-menu-content-carousel">
-                        <i class="fa-solid fa-circle-chevron-left carousel-arrow back left"></i>
+                        <i class="fa-solid fa-circle-chevron-left carousel-arrow back left" style="pointer-events: visible;"></i>
 
                         <div class="skill-menu-content-carousel-container">
                         
-                           <div id="card" class="skill-menu-content-carousel-container-card card-fade">
-                              
-                              <h3 class="skill-menu-content-carousel-container-card-title carousel-title">Auto-Atendimento</h3>
-                              <hr>
-                              <div class="skill-menu-content-carousel-container-card-desc">
-                                 <ul class="carousel-ul">
-                                    <li>Interface intuitiva para auto-atendimento em uma loja de tintas.</li>
-                                    <li>Interface responsiva para acesso mobile</li>
-                                    <li>Interações com o banco de dados: criar, ler, atualizar, deletar e pesquisar - com filtro -</li>
-                                 </ul>
-                              </div>
+                           
 
-                              <div class="skill-menu-content-carousel-container-card-img carousel-img">
-                                 <a href="http://tawanrio.com/tintas-estancia/" target="_blank">
-                                    <img src="assets/img/portfolio/auto-atendimento.png" alt="">
-                                    <p>Acessar</p>
-                                 </a>
-                              </div>
-
-                           </div>
-
-                     </div>
-                        <i class="fa-solid fa-circle-chevron-right carousel-arrow back right"></i>
+                     <div id="card" class="skill-menu-content-carousel-container-card card-fade"><div class="skill-menu-content-carousel-container-card-img carousel-img"><div class="divImg" id="divImg"><div class="divImgContainer"><img src="assets/img/certificados/certificado-php.jpg"><a><i class="fa-solid fa-expand"></i></a></div></div><a href="https://www.udemy.com/certificate/UC-f33b2010-9301-4ec4-bbaf-d0aa77121148/" target="_blank">Acessar</a></div><div class="skill-menu-content-carousel-container-card-desc"><ul class="carousel-ul"><li>Criar uma base sólida em PHP, desde os princípios mais básicos.</li><li>Conhecer a sintaxe do PHP, os tipos e variáveis da linguagem.</li><li>Entender as estruturas de lógica e repetições.</li><li>Criar funções, classes e objetos em PHP.</li><li>Integrar o PHP com HTML, CSS e Javascript.</li><li>Integrar a aplicação com banco de dados usando PDO e MySQLi.</li><li>Criar projetos PHP de aplicações reais e com layouts atrativos.</li></ul></div></div></div>
+                        <i class="fa-solid fa-circle-chevron-right carousel-arrow back right" style="pointer-events: visible;"></i>
                      </div>
 
                      <div class="skill-menu-content-nav">
-                        <ul class="carousel-nav">
-                           <li>
-                              <i class="fa-brands fa-php"></i>
-                              <span>PHP</span>
-                           </li>
-                           <li class="active" orderId="1">
-                              <i class="fa-solid fa-database"></i>
-                              <span>MYSQL/NOSQL</span>
-                           </li>
-                           <li>
-                              <i class="fa-brands fa-node"></i>
-                              <span>NodeJs</span>
-                           </li>
-                           <li>
-                              <i class="fa-brands fa-laravel"></i>
-                              <span>Laravel</span>
-                           </li>
-                        </ul>
+                        <ul class="carousel-nav"><li orderid="0" class="active" style="pointer-events: visible;"><i class="fa-brands fa-php"></i><span>PHP</span></li></ul>
                      </div>
                   </div>
 
@@ -159,7 +122,7 @@
                </div>
 
                
-            <div class="skill-card" data-aos="fade-up" data-aos-duration="1500">
+            <div class="skill-card aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                <div class="skill-card-content">
                      <h3 class="skill-card-content-title">Front-end<hr></h3>
                      <p>
@@ -179,63 +142,22 @@
 
                
                <div class="skill-menu-content front" id="front">
-                  <div class="skill-menu-content-title content-title">
-                     <i class="fa-brands fa-js-square"></i>
-                     <span>Javascript</span>
-                  </div>
+                  <div class="skill-menu-content-title content-title"><i class="fa-brands fa-js-square"></i><span>Javascript</span></div>
 
                    <div class="skill-menu-content-carousel">
-                        <i class="fa-solid fa-circle-chevron-left carousel-arrow front left"></i>
+                        <i class="fa-solid fa-circle-chevron-left carousel-arrow front left" style="pointer-events: visible;"></i>
                                                  
 
                         <div class="skill-menu-content-carousel-container">
-                           <div id="card" class="skill-menu-content-carousel-container-card card-fade">
-                              
-                              <h3 class="skill-menu-content-carousel-container-card-title carousel-title">Missão Impossível</h3>
-                              <hr>
-                              <div class="skill-menu-content-carousel-container-card-desc">
-                                 <ul class="carousel-ul">
-                                    <li>Jogo de obstaculos com Objetivo chegar ao final da fase sem colidir.</li>
-                                    <li>Possui logica de colisão com obstaculos e barreiras</li> 
-                                 </ul>
-                              </div>
-                              
-                              <div class="skill-menu-content-carousel-container-card-img carousel-img">
-                                 <a href="http://tawanrio.com/jogo-impossivel/" target="_blank"><img src="assets/img/portfolio/jogo-impossivel.gif" alt=""></a>
-                                 <a href="http://tawanrio.com/jogo-impossivel/" target="_blank"><p>Acessar</p></a>
-                              </div>
-                           </div>
+                           
 
-                        </div>
+                        <div id="card" class="skill-menu-content-carousel-container-card card-fade"><div class="skill-menu-content-carousel-container-card-img carousel-img"><div class="divImg" id="divImg"><div class="divImgContainer"><img src="assets/img/certificados/certificado-javascript.jpg"><a><i class="fa-solid fa-expand"></i></a></div></div><a href="https://www.udemy.com/certificate/UC-f39de778-ea58-4d35-87ae-17ee4144c7fc/" target="_blank">Acessar</a></div><div class="skill-menu-content-carousel-container-card-desc"><ul class="carousel-ul"><li>Dominar a linguagem Javascript.</li><li>Desenvolver diversos códigos em exemplos práticos reais.</li><li>Conhecer as principais novidades no ES6.</li><li>Iniciar com orientação a objetos em Javascript.</li><li>Conhecer o básico sobre o modelo MVC.</li><li>Dar primeiros passos na criação de uma API Rest.</li></ul></div></div></div>
                      
                      
-                      <i class="fa-solid fa-circle-chevron-right carousel-arrow front right"></i>
+                      <i class="fa-solid fa-circle-chevron-right carousel-arrow front right" style="pointer-events: visible;"></i>
                    </div>
-                   <div class="skill-menu-content-nav" >
-                      <ul class="carousel-nav">
-                        <li>
-                           <i class="fa-brands fa-html5"></i>
-                           <span>HTML</span>
-                        </li>
-                        <li>
-                           <i class="fa-brands fa-css3"></i>
-                           <span>CSS</span>
-                        </li>
-                        <li><i class="fa-brands fa-sass"></i>
-                           <span>SASS/SCSS</span>
-                        </li>
-                        <li class='active' orderId="1"><i class="fa-brands fa-js-square"></i>
-                           <span>Javascript</span>
-                        </li>
-                        <li>
-                           <i class="fa-brands fa-bootstrap"></i>
-                           <span>Bootstrap</span>
-                        </li>
-                        <li>
-                           <i class="fa-brands fa-wordpress-simple"></i>
-                           <span>Wordpress</span>
-                        </li>
-                      </ul>
+                   <div class="skill-menu-content-nav">
+                      <ul class="carousel-nav"><li orderid="0" class="active" style="pointer-events: visible;"><i class="fa-brands fa-js-square"></i><span>Javascript</span></li><li orderid="1" style="pointer-events: visible;"><i class="fa-brands fa-js"></i><span>JQuery</span></li><li orderid="2" style="pointer-events: visible;"><i class="fa-brands fa-sass"></i><span>SASS/SCSS</span></li></ul>
                    </div>
                 </div>
 
@@ -360,7 +282,7 @@
 
         
    <script src="assets/js/app.js" type="module"></script>
-
+   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script>
       AOS.init();
